@@ -30,3 +30,917 @@
 2024-01-10 13:22:52,219 p=6174 u=vagrant n=ansible | changed: [web]
 2024-01-10 13:22:52,224 p=6174 u=vagrant n=ansible | PLAY RECAP **********************************************************************************************************************************
 2024-01-10 13:22:52,225 p=6174 u=vagrant n=ansible | web                        : ok=6    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-10 14:12:34,076 p=6415 u=vagrant n=ansible | ansible-playbook 2.9.27
+  config file = /home/vagrant/mini-projects/webapp-ansible/ansible.cfg
+  configured module search path = [u'/home/vagrant/.ansible/plugins/modules', u'/usr/share/ansible/plugins/modules']
+  ansible python module location = /usr/lib/python2.7/site-packages/ansible
+  executable location = /usr/bin/ansible-playbook
+  python version = 2.7.5 (default, Nov 14 2023, 16:14:06) [GCC 4.8.5 20150623 (Red Hat 4.8.5-44)]
+2024-01-10 14:12:34,076 p=6415 u=vagrant n=ansible | Using /home/vagrant/mini-projects/webapp-ansible/ansible.cfg as config file
+2024-01-10 14:12:34,104 p=6415 u=vagrant n=ansible | host_list declined parsing /home/vagrant/mini-projects/webapp-ansible/inv.yaml as it did not pass its verify_file() method
+2024-01-10 14:12:34,105 p=6415 u=vagrant n=ansible | script declined parsing /home/vagrant/mini-projects/webapp-ansible/inv.yaml as it did not pass its verify_file() method
+2024-01-10 14:12:34,115 p=6415 u=vagrant n=ansible | Parsed /home/vagrant/mini-projects/webapp-ansible/inv.yaml inventory source with yaml plugin
+2024-01-10 14:12:34,939 p=6415 u=vagrant n=ansible | Skipping callback 'actionable', as we already have a stdout callback.
+2024-01-10 14:12:34,939 p=6415 u=vagrant n=ansible | Skipping callback 'counter_enabled', as we already have a stdout callback.
+2024-01-10 14:12:34,939 p=6415 u=vagrant n=ansible | Skipping callback 'debug', as we already have a stdout callback.
+2024-01-10 14:12:34,940 p=6415 u=vagrant n=ansible | Skipping callback 'dense', as we already have a stdout callback.
+2024-01-10 14:12:34,940 p=6415 u=vagrant n=ansible | Skipping callback 'dense', as we already have a stdout callback.
+2024-01-10 14:12:34,940 p=6415 u=vagrant n=ansible | Skipping callback 'full_skip', as we already have a stdout callback.
+2024-01-10 14:12:34,940 p=6415 u=vagrant n=ansible | Skipping callback 'json', as we already have a stdout callback.
+2024-01-10 14:12:34,940 p=6415 u=vagrant n=ansible | Skipping callback 'minimal', as we already have a stdout callback.
+2024-01-10 14:12:34,940 p=6415 u=vagrant n=ansible | Skipping callback 'null', as we already have a stdout callback.
+2024-01-10 14:12:34,941 p=6415 u=vagrant n=ansible | Skipping callback 'oneline', as we already have a stdout callback.
+2024-01-10 14:12:34,941 p=6415 u=vagrant n=ansible | Skipping callback 'selective', as we already have a stdout callback.
+2024-01-10 14:12:34,941 p=6415 u=vagrant n=ansible | Skipping callback 'skippy', as we already have a stdout callback.
+2024-01-10 14:12:34,941 p=6415 u=vagrant n=ansible | Skipping callback 'stderr', as we already have a stdout callback.
+2024-01-10 14:12:34,941 p=6415 u=vagrant n=ansible | Skipping callback 'unixy', as we already have a stdout callback.
+2024-01-10 14:12:34,941 p=6415 u=vagrant n=ansible | Skipping callback 'yaml', as we already have a stdout callback.
+2024-01-10 14:12:34,942 p=6415 u=vagrant n=ansible | PLAYBOOK: deploy.yaml ***********************************************************************************************************************
+2024-01-10 14:12:34,942 p=6415 u=vagrant n=ansible | 1 plays in deploy.yaml
+2024-01-10 14:12:34,951 p=6415 u=vagrant n=ansible | PLAY [Apache installation using docker] *****************************************************************************************************
+2024-01-10 14:12:34,983 p=6415 u=vagrant n=ansible | TASK [Gathering Facts] **********************************************************************************************************************
+2024-01-10 14:12:35,011 p=6424 u=vagrant n=ansible | <192.168.50.14> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-01-10 14:12:35,020 p=6424 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d 192.168.50.14 '/bin/sh -c '"'"'echo ~vagrant && sleep 0'"'"''
+2024-01-10 14:12:35,473 p=6424 u=vagrant n=ansible | <192.168.50.14> (0, '/home/vagrant\n', '')
+2024-01-10 14:12:35,474 p=6424 u=vagrant n=ansible | <192.168.50.14> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-01-10 14:12:35,475 p=6424 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d 192.168.50.14 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/vagrant/.ansible/tmp `"&& mkdir "` echo /home/vagrant/.ansible/tmp/ansible-tmp-1704895955.47-6424-193781489877112 `" && echo ansible-tmp-1704895955.47-6424-193781489877112="` echo /home/vagrant/.ansible/tmp/ansible-tmp-1704895955.47-6424-193781489877112 `" ) && sleep 0'"'"''
+2024-01-10 14:12:35,532 p=6424 u=vagrant n=ansible | <192.168.50.14> (0, 'ansible-tmp-1704895955.47-6424-193781489877112=/home/vagrant/.ansible/tmp/ansible-tmp-1704895955.47-6424-193781489877112\n', '')
+2024-01-10 14:12:36,065 p=6424 u=vagrant n=ansible | <web> Attempting python interpreter discovery
+2024-01-10 14:12:36,065 p=6424 u=vagrant n=ansible | <192.168.50.14> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-01-10 14:12:36,068 p=6424 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d 192.168.50.14 '/bin/sh -c '"'"'echo PLATFORM; uname; echo FOUND; command -v '"'"'"'"'"'"'"'"'/usr/bin/python'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.7'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.6'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python3.5'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python2.7'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python2.6'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'/usr/libexec/platform-python'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'/usr/bin/python3'"'"'"'"'"'"'"'"'; command -v '"'"'"'"'"'"'"'"'python'"'"'"'"'"'"'"'"'; echo ENDFOUND && sleep 0'"'"''
+2024-01-10 14:12:36,121 p=6424 u=vagrant n=ansible | <192.168.50.14> (0, 'PLATFORM\nLinux\nFOUND\n/usr/bin/python\n/usr/bin/python3.6\n/usr/bin/python2.7\n/usr/libexec/platform-python\n/usr/bin/python3\n/usr/bin/python\nENDFOUND\n', '')
+2024-01-10 14:12:36,122 p=6424 u=vagrant n=ansible | <192.168.50.14> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-01-10 14:12:36,124 p=6424 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d 192.168.50.14 '/bin/sh -c '"'"'/usr/bin/python && sleep 0'"'"''
+2024-01-10 14:12:36,226 p=6424 u=vagrant n=ansible | <192.168.50.14> (0, '{"osrelease_content": "NAME=\\"CentOS Linux\\"\\nVERSION=\\"7 (Core)\\"\\nID=\\"centos\\"\\nID_LIKE=\\"rhel fedora\\"\\nVERSION_ID=\\"7\\"\\nPRETTY_NAME=\\"CentOS Linux 7 (Core)\\"\\nANSI_COLOR=\\"0;31\\"\\nCPE_NAME=\\"cpe:/o:centos:centos:7\\"\\nHOME_URL=\\"https://www.centos.org/\\"\\nBUG_REPORT_URL=\\"https://bugs.centos.org/\\"\\n\\nCENTOS_MANTISBT_PROJECT=\\"CentOS-7\\"\\nCENTOS_MANTISBT_PROJECT_VERSION=\\"7\\"\\nREDHAT_SUPPORT_PRODUCT=\\"centos\\"\\nREDHAT_SUPPORT_PRODUCT_VERSION=\\"7\\"\\n\\n", "platform_dist_result": ["centos", "7.9.2009", "Core"]}\n', '')
+2024-01-10 14:12:36,232 p=6424 u=vagrant n=ansible | Using module file /usr/lib/python2.7/site-packages/ansible/modules/system/setup.py
+2024-01-10 14:12:36,233 p=6424 u=vagrant n=ansible | <192.168.50.14> PUT /home/vagrant/.ansible/tmp/ansible-local-6415ZdQZvB/tmpoVYx93 TO /home/vagrant/.ansible/tmp/ansible-tmp-1704895955.47-6424-193781489877112/AnsiballZ_setup.py
+2024-01-10 14:12:36,235 p=6424 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 sftp -o BatchMode=no -b - -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d '[192.168.50.14]'
+2024-01-10 14:12:36,324 p=6424 u=vagrant n=ansible | <192.168.50.14> (0, 'sftp> put /home/vagrant/.ansible/tmp/ansible-local-6415ZdQZvB/tmpoVYx93 /home/vagrant/.ansible/tmp/ansible-tmp-1704895955.47-6424-193781489877112/AnsiballZ_setup.py\n', '')
+2024-01-10 14:12:36,325 p=6424 u=vagrant n=ansible | <192.168.50.14> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-01-10 14:12:36,327 p=6424 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d 192.168.50.14 '/bin/sh -c '"'"'chmod u+x /home/vagrant/.ansible/tmp/ansible-tmp-1704895955.47-6424-193781489877112/ /home/vagrant/.ansible/tmp/ansible-tmp-1704895955.47-6424-193781489877112/AnsiballZ_setup.py && sleep 0'"'"''
+2024-01-10 14:12:36,379 p=6424 u=vagrant n=ansible | <192.168.50.14> (0, '', '')
+2024-01-10 14:12:36,379 p=6424 u=vagrant n=ansible | <192.168.50.14> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-01-10 14:12:36,381 p=6424 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d -tt 192.168.50.14 '/bin/sh -c '"'"'sudo -H -S -n  -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-ekuojngpdfietmkiaqrlpqxetivsyiaf ; /usr/bin/python /home/vagrant/.ansible/tmp/ansible-tmp-1704895955.47-6424-193781489877112/AnsiballZ_setup.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+2024-01-10 14:12:36,479 p=6424 u=vagrant n=ansible | Escalation succeeded
+2024-01-10 14:12:37,243 p=6424 u=vagrant n=ansible | <192.168.50.14> (0, '\r\n{"invocation": {"module_args": {"filter": "*", "gather_subset": ["all"], "fact_path": "/etc/ansible/facts.d", "gather_timeout": 10}}, "ansible_facts": {"ansible_fibre_channel_wwn": [], "module_setup": true, "ansible_distribution_version": "7.9", "ansible_distribution_file_variety": "RedHat", "ansible_env": {"USERNAME": "root", "LANG": "en_US.UTF-8", "TERM": "xterm-256color", "SHELL": "/bin/bash", "SUDO_COMMAND": "/bin/sh -c echo BECOME-SUCCESS-ekuojngpdfietmkiaqrlpqxetivsyiaf ; /usr/bin/python /home/vagrant/.ansible/tmp/ansible-tmp-1704895955.47-6424-193781489877112/AnsiballZ_setup.py", "SHLVL": "1", "XDG_SESSION_ID": "15", "SUDO_UID": "1000", "SUDO_GID": "1000", "PWD": "/home/vagrant", "LOGNAME": "root", "USER": "root", "MAIL": "/var/mail/vagrant", "PATH": "/sbin:/bin:/usr/sbin:/usr/bin", "SUDO_USER": "vagrant", "LS_COLORS": "rs=0:di=38;5;27:ln=38;5;51:mh=44;38;5;15:pi=40;38;5;11:so=38;5;13:do=38;5;5:bd=48;5;232;38;5;11:cd=48;5;232;38;5;3:or=48;5;232;38;5;9:mi=05;48;5;232;38;5;15:su=48;5;196;38;5;15:sg=48;5;11;38;5;16:ca=48;5;196;38;5;226:tw=48;5;10;38;5;16:ow=48;5;10;38;5;21:st=48;5;21;38;5;15:ex=38;5;34:*.tar=38;5;9:*.tgz=38;5;9:*.arc=38;5;9:*.arj=38;5;9:*.taz=38;5;9:*.lha=38;5;9:*.lz4=38;5;9:*.lzh=38;5;9:*.lzma=38;5;9:*.tlz=38;5;9:*.txz=38;5;9:*.tzo=38;5;9:*.t7z=38;5;9:*.zip=38;5;9:*.z=38;5;9:*.Z=38;5;9:*.dz=38;5;9:*.gz=38;5;9:*.lrz=38;5;9:*.lz=38;5;9:*.lzo=38;5;9:*.xz=38;5;9:*.bz2=38;5;9:*.bz=38;5;9:*.tbz=38;5;9:*.tbz2=38;5;9:*.tz=38;5;9:*.deb=38;5;9:*.rpm=38;5;9:*.jar=38;5;9:*.war=38;5;9:*.ear=38;5;9:*.sar=38;5;9:*.rar=38;5;9:*.alz=38;5;9:*.ace=38;5;9:*.zoo=38;5;9:*.cpio=38;5;9:*.7z=38;5;9:*.rz=38;5;9:*.cab=38;5;9:*.jpg=38;5;13:*.jpeg=38;5;13:*.gif=38;5;13:*.bmp=38;5;13:*.pbm=38;5;13:*.pgm=38;5;13:*.ppm=38;5;13:*.tga=38;5;13:*.xbm=38;5;13:*.xpm=38;5;13:*.tif=38;5;13:*.tiff=38;5;13:*.png=38;5;13:*.svg=38;5;13:*.svgz=38;5;13:*.mng=38;5;13:*.pcx=38;5;13:*.mov=38;5;13:*.mpg=38;5;13:*.mpeg=38;5;13:*.m2v=38;5;13:*.mkv=38;5;13:*.webm=38;5;13:*.ogm=38;5;13:*.mp4=38;5;13:*.m4v=38;5;13:*.mp4v=38;5;13:*.vob=38;5;13:*.qt=38;5;13:*.nuv=38;5;13:*.wmv=38;5;13:*.asf=38;5;13:*.rm=38;5;13:*.rmvb=38;5;13:*.flc=38;5;13:*.avi=38;5;13:*.fli=38;5;13:*.flv=38;5;13:*.gl=38;5;13:*.dl=38;5;13:*.xcf=38;5;13:*.xwd=38;5;13:*.yuv=38;5;13:*.cgm=38;5;13:*.emf=38;5;13:*.axv=38;5;13:*.anx=38;5;13:*.ogv=38;5;13:*.ogx=38;5;13:*.aac=38;5;45:*.au=38;5;45:*.flac=38;5;45:*.mid=38;5;45:*.midi=38;5;45:*.mka=38;5;45:*.mp3=38;5;45:*.mpc=38;5;45:*.ogg=38;5;45:*.ra=38;5;45:*.wav=38;5;45:*.axa=38;5;45:*.oga=38;5;45:*.spx=38;5;45:*.xspf=38;5;45:", "HOME": "/root", "_": "/usr/bin/python"}, "ansible_userspace_bits": "64", "ansible_architecture": "x86_64", "ansible_default_ipv4": {"macaddress": "08:00:27:03:5e:61", "network": "10.0.2.0", "mtu": 1500, "broadcast": "10.0.2.255", "alias": "enp0s3", "netmask": "255.255.255.0", "address": "10.0.2.15", "interface": "enp0s3", "type": "ether", "gateway": "10.0.2.2"}, "ansible_swapfree_mb": 1017, "ansible_default_ipv6": {}, "ansible_cmdline": {"LANG": "en_US.UTF-8", "BOOT_IMAGE": "/vmlinuz-3.10.0-1160.105.1.el7.x86_64", "quiet": true, "rhgb": true, "rd.lvm.lv": "centos/swap", "crashkernel": "auto", "ro": true, "root": "/dev/mapper/centos-root"}, "ansible_machine_id": "17eba3d662974e43a4dbe4e894f51510", "ansible_userspace_architecture": "x86_64", "ansible_product_uuid": "C537821A-FB01-804C-8279-DC0F54A0CF86", "ansible_pkg_mgr": "yum", "ansible_distribution": "CentOS", "ansible_iscsi_iqn": "", "ansible_all_ipv6_addresses": ["fe80::a00:27ff:fee1:67c", "fe80::a00:27ff:fe03:5e61", "fe80::42:83ff:fe83:7b93", "fe80::a4ef:85ff:fed3:a542"], "ansible_uptime_seconds": 16962, "ansible_kernel": "3.10.0-1160.105.1.el7.x86_64", "ansible_system_capabilities_enforced": "True", "ansible_python": {"executable": "/usr/bin/python", "version": {"micro": 5, "major": 2, "releaselevel": "final", "serial": 0, "minor": 7}, "type": "CPython", "has_sslcontext": true, "version_info": [2, 7, 5, "final", 0]}, "ansible_is_chroot": false, "ansible_hostnqn": "", "ansible_user_shell": "/bin/bash", "ansible_product_serial": "0", "ansible_form_factor": "Other", "ansible_distribution_file_parsed": true, "ansible_fips": false, "ansible_user_id": "root", "ansible_selinux_python_present": true, "ansible_kernel_version": "#1 SMP Thu Dec 7 15:39:45 UTC 2023", "ansible_local": {}, "ansible_veth98d8b4b": {"macaddress": "a6:ef:85:d3:a5:42", "features": {"tx_checksum_ipv4": "off [fixed]", "generic_receive_offload": "on", "tx_checksum_ipv6": "off [fixed]", "tx_scatter_gather_fraglist": "on", "rx_all": "off [fixed]", "highdma": "on", "rx_fcs": "off [fixed]", "tx_lockless": "on [fixed]", "tx_tcp_ecn_segmentation": "on", "rx_udp_tunnel_port_offload": "off [fixed]", "tx_tcp6_segmentation": "on", "tx_gso_robust": "off [fixed]", "tx_ipip_segmentation": "on", "tx_tcp_mangleid_segmentation": "on", "tx_checksumming": "on", "vlan_challenged": "off [fixed]", "loopback": "off [fixed]", "fcoe_mtu": "off [fixed]", "scatter_gather": "on", "tx_checksum_sctp": "on", "tx_vlan_stag_hw_insert": "on", "rx_vlan_stag_hw_parse": "on", "tx_gso_partial": "off [fixed]", "rx_gro_hw": "off [fixed]", "rx_vlan_stag_filter": "off [fixed]", "large_receive_offload": "off [fixed]", "tx_scatter_gather": "on", "rx_checksumming": "on", "tx_tcp_segmentation": "on", "netns_local": "off [fixed]", "busy_poll": "off [fixed]", "generic_segmentation_offload": "on", "tx_udp_tnl_segmentation": "on", "tcp_segmentation_offload": "on", "l2_fwd_offload": "off [fixed]", "rx_vlan_offload": "on", "ntuple_filters": "off [fixed]", "tx_gre_csum_segmentation": "on", "tx_nocache_copy": "off", "tx_udp_tnl_csum_segmentation": "on", "udp_fragmentation_offload": "on", "tx_sctp_segmentation": "on", "tx_sit_segmentation": "on", "tx_checksum_fcoe_crc": "off [fixed]", "hw_tc_offload": "off [fixed]", "tx_checksum_ip_generic": "on", "tx_fcoe_segmentation": "off [fixed]", "rx_vlan_filter": "off [fixed]", "tx_vlan_offload": "on", "receive_hashing": "off [fixed]", "tx_gre_segmentation": "on"}, "type": "ether", "hw_timestamp_filters": [], "mtu": 1500, "device": "veth98d8b4b", "promisc": true, "timestamping": ["rx_software", "software"], "ipv6": [{"scope": "link", "prefix": "64", "address": "fe80::a4ef:85ff:fed3:a542"}], "active": true, "speed": 10000}, "ansible_processor_vcpus": 2, "ansible_docker0": {"macaddress": "02:42:83:83:7b:93", "features": {"tx_checksum_ipv4": "off [fixed]", "generic_receive_offload": "on", "tx_checksum_ipv6": "off [fixed]", "tx_scatter_gather_fraglist": "on", "rx_all": "off [fixed]", "highdma": "on", "rx_fcs": "off [fixed]", "tx_lockless": "on [fixed]", "tx_tcp_ecn_segmentation": "on", "rx_udp_tunnel_port_offload": "off [fixed]", "tx_tcp6_segmentation": "on", "tx_gso_robust": "off [requested on]", "tx_ipip_segmentation": "on", "tx_tcp_mangleid_segmentation": "on", "tx_checksumming": "on", "vlan_challenged": "off [fixed]", "loopback": "off [fixed]", "fcoe_mtu": "off [fixed]", "scatter_gather": "on", "tx_checksum_sctp": "off [fixed]", "tx_vlan_stag_hw_insert": "on", "rx_vlan_stag_hw_parse": "off [fixed]", "tx_gso_partial": "on", "rx_gro_hw": "off [fixed]", "rx_vlan_stag_filter": "off [fixed]", "large_receive_offload": "off [fixed]", "tx_scatter_gather": "on", "rx_checksumming": "off [fixed]", "tx_tcp_segmentation": "on", "netns_local": "on [fixed]", "busy_poll": "off [fixed]", "generic_segmentation_offload": "on", "tx_udp_tnl_segmentation": "on", "tcp_segmentation_offload": "on", "l2_fwd_offload": "off [fixed]", "rx_vlan_offload": "off [fixed]", "ntuple_filters": "off [fixed]", "tx_gre_csum_segmentation": "on", "tx_nocache_copy": "off", "tx_udp_tnl_csum_segmentation": "on", "udp_fragmentation_offload": "on", "tx_sctp_segmentation": "on", "tx_sit_segmentation": "on", "tx_checksum_fcoe_crc": "off [fixed]", "hw_tc_offload": "off [fixed]", "tx_checksum_ip_generic": "on", "tx_fcoe_segmentation": "off [requested on]", "rx_vlan_filter": "off [fixed]", "tx_vlan_offload": "on", "receive_hashing": "off [fixed]", "tx_gre_segmentation": "on"}, "interfaces": ["veth98d8b4b"], "id": "8000.024283837b93", "mtu": 1500, "device": "docker0", "promisc": false, "stp": false, "ipv4": {"broadcast": "172.17.255.255", "netmask": "255.255.0.0", "network": "172.17.0.0", "address": "172.17.0.1"}, "ipv6": [{"scope": "link", "prefix": "64", "address": "fe80::42:83ff:fe83:7b93"}], "active": true, "timestamping": ["rx_software", "software"], "type": "bridge", "hw_timestamp_filters": []}, "ansible_processor": ["0", "GenuineIntel", "Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz", "1", "GenuineIntel", "Intel(R) Core(TM) i5-7200U CPU @ 2.50GHz"], "ansible_ssh_host_key_ecdsa_public": "AAAAE2VjZHNhLXNoYTItbmlzdHAyNTYAAAAIbmlzdHAyNTYAAABBBF0pdBiiLgjwzIn72XaHCet6+H6RW8YoEQ1uZiH4UYTkR06QoDLPchDm7HL7exfpIUYTw7rTkTe95K3FOPP42nY=", "ansible_user_gid": 0, "ansible_system_vendor": "innotek GmbH", "ansible_swaptotal_mb": 1023, "ansible_distribution_major_version": "7", "ansible_real_group_id": 0, "ansible_lsb": {}, "ansible_machine": "x86_64", "ansible_ssh_host_key_rsa_public": "AAAAB3NzaC1yc2EAAAADAQABAAABAQDREWGauw73O0x236wJ8M5kMOGKyr8feY/kFsDl0V+xg+PC9shs2I5aeMshmlgwlc1chbKryY+JOYQXSQl5GicbepY/IYVZfeHerGysG9QduYlSLI7v2bfVNTLh65NKDofuDtqYRoNZiHLRKnMEyUyEp4ru4u688yx0c1bGhYv9cNzj2VR1fxRoJnH20FqrYV1itlG1I5cq0EfatD1h92VHYaCbYWmom+I/g6u94ek4+BFXkDhA6a1twnx3l7zxIFpAL5rvC0MmMI5BVPqK10K2WVbkJZBXAiEWJ/iODVmBg8ioHF0Msjo5EdBeggMxKol+AkoKWpmCl+Ul56rMMhez", "ansible_user_gecos": "root", "ansible_processor_threads_per_core": 1, "ansible_system": "Linux", "ansible_all_ipv4_addresses": ["192.168.50.14", "10.0.2.15", "172.17.0.1"], "ansible_python_version": "2.7.5", "ansible_product_version": "1.2", "ansible_service_mgr": "systemd", "ansible_memory_mb": {"real": {"total": 486, "used": 458, "free": 28}, "swap": {"cached": 0, "total": 1023, "free": 1017, "used": 6}, "nocache": {"used": 206, "free": 280}}, "ansible_user_dir": "/root", "gather_subset": ["all"], "ansible_real_user_id": 0, "ansible_virtualization_role": "guest", "ansible_dns": {"nameservers": ["10.0.2.3"], "options": {"single-request-reopen": true}}, "ansible_effective_group_id": 0, "ansible_lo": {"features": {"tx_checksum_ipv4": "off [fixed]", "generic_receive_offload": "on", "tx_checksum_ipv6": "off [fixed]", "tx_scatter_gather_fraglist": "on [fixed]", "rx_all": "off [fixed]", "highdma": "on [fixed]", "rx_fcs": "off [fixed]", "tx_lockless": "on [fixed]", "tx_tcp_ecn_segmentation": "on", "rx_udp_tunnel_port_offload": "off [fixed]", "tx_tcp6_segmentation": "on", "tx_gso_robust": "off [fixed]", "tx_ipip_segmentation": "off [fixed]", "tx_tcp_mangleid_segmentation": "on", "tx_checksumming": "on", "vlan_challenged": "on [fixed]", "loopback": "on [fixed]", "fcoe_mtu": "off [fixed]", "scatter_gather": "on", "tx_checksum_sctp": "on [fixed]", "tx_vlan_stag_hw_insert": "off [fixed]", "rx_vlan_stag_hw_parse": "off [fixed]", "tx_gso_partial": "off [fixed]", "rx_gro_hw": "off [fixed]", "rx_vlan_stag_filter": "off [fixed]", "large_receive_offload": "off [fixed]", "tx_scatter_gather": "on [fixed]", "rx_checksumming": "on [fixed]", "tx_tcp_segmentation": "on", "netns_local": "on [fixed]", "busy_poll": "off [fixed]", "generic_segmentation_offload": "on", "tx_udp_tnl_segmentation": "off [fixed]", "tcp_segmentation_offload": "on", "l2_fwd_offload": "off [fixed]", "rx_vlan_offload": "off [fixed]", "ntuple_filters": "off [fixed]", "tx_gre_csum_segmentation": "off [fixed]", "tx_nocache_copy": "off [fixed]", "tx_udp_tnl_csum_segmentation": "off [fixed]", "udp_fragmentation_offload": "on", "tx_sctp_segmentation": "on", "tx_sit_segmentation": "off [fixed]", "tx_checksum_fcoe_crc": "off [fixed]", "hw_tc_offload": "off [fixed]", "tx_checksum_ip_generic": "on [fixed]", "tx_fcoe_segmentation": "off [fixed]", "rx_vlan_filter": "off [fixed]", "tx_vlan_offload": "off [fixed]", "receive_hashing": "off [fixed]", "tx_gre_segmentation": "off [fixed]"}, "hw_timestamp_filters": [], "mtu": 65536, "device": "lo", "promisc": false, "timestamping": ["rx_software", "software"], "ipv4": {"broadcast": "", "netmask": "255.0.0.0", "network": "127.0.0.0", "address": "127.0.0.1"}, "ipv6": [{"scope": "host", "prefix": "128", "address": "::1"}], "active": true, "type": "loopback"}, "ansible_memtotal_mb": 486, "ansible_device_links": {"masters": {"sda2": ["dm-0", "dm-1", "dm-2"]}, "labels": {}, "ids": {"sda2": ["ata-VBOX_HARDDISK_VB2e85d355-50328e38-part2", "lvm-pv-uuid-gEVXsf-G92H-S31z-pTeX-FaiF-vGbM-azCcrK"], "sda": ["ata-VBOX_HARDDISK_VB2e85d355-50328e38"], "sda1": ["ata-VBOX_HARDDISK_VB2e85d355-50328e38-part1"], "dm-2": ["dm-name-centos-home", "dm-uuid-LVM-FTZwJ2FeoOSji2jb5qzgaZFvkmUIKBQoGiHYMa9MXBUVKXCVnYF2qhvrZM2Rb3lz"], "dm-0": ["dm-name-centos-root", "dm-uuid-LVM-FTZwJ2FeoOSji2jb5qzgaZFvkmUIKBQogfVN7PvUZyMIAIZbBsDVqR31eLbCsgOo"], "dm-1": ["dm-name-centos-swap", "dm-uuid-LVM-FTZwJ2FeoOSji2jb5qzgaZFvkmUIKBQoMaJ5aBrZWXtfhXH4ShWAqk4J0nFhQiXm"]}, "uuids": {"sda1": ["25275f32-3cc5-4854-8c22-533e2ba176aa"], "dm-2": ["99f78074-3361-4312-8699-ab59bccfc55c"], "dm-0": ["95bcd4fd-91d3-41ac-b99c-e2bfce10ac9d"], "dm-1": ["61bc2e3f-cad6-4f36-9a8d-23168c13822b"]}}, "ansible_apparmor": {"status": "disabled"}, "ansible_proc_cmdline": {"LANG": "en_US.UTF-8", "BOOT_IMAGE": "/vmlinuz-3.10.0-1160.105.1.el7.x86_64", "quiet": true, "rhgb": true, "rd.lvm.lv": ["centos/root", "centos/swap"], "crashkernel": "auto", "ro": true, "root": "/dev/mapper/centos-root"}, "ansible_memfree_mb": 28, "ansible_processor_count": 1, "ansible_hostname": "webserver", "ansible_enp0s8": {"macaddress": "08:00:27:e1:06:7c", "features": {"tx_checksum_ipv4": "off [fixed]", "generic_receive_offload": "on", "tx_checksum_ipv6": "off [fixed]", "tx_scatter_gather_fraglist": "off [fixed]", "rx_all": "off", "highdma": "off [fixed]", "rx_fcs": "off", "tx_lockless": "off [fixed]", "tx_tcp_ecn_segmentation": "off [fixed]", "rx_udp_tunnel_port_offload": "off [fixed]", "tx_tcp6_segmentation": "off [fixed]", "tx_gso_robust": "off [fixed]", "tx_ipip_segmentation": "off [fixed]", "tx_tcp_mangleid_segmentation": "off", "tx_checksumming": "on", "vlan_challenged": "off [fixed]", "loopback": "off [fixed]", "fcoe_mtu": "off [fixed]", "scatter_gather": "on", "tx_checksum_sctp": "off [fixed]", "tx_vlan_stag_hw_insert": "off [fixed]", "rx_vlan_stag_hw_parse": "off [fixed]", "tx_gso_partial": "off [fixed]", "rx_gro_hw": "off [fixed]", "rx_vlan_stag_filter": "off [fixed]", "large_receive_offload": "off [fixed]", "tx_scatter_gather": "on", "rx_checksumming": "off", "tx_tcp_segmentation": "on", "netns_local": "off [fixed]", "busy_poll": "off [fixed]", "generic_segmentation_offload": "on", "tx_udp_tnl_segmentation": "off [fixed]", "tcp_segmentation_offload": "on", "l2_fwd_offload": "off [fixed]", "rx_vlan_offload": "on", "ntuple_filters": "off [fixed]", "tx_gre_csum_segmentation": "off [fixed]", "tx_nocache_copy": "off", "tx_udp_tnl_csum_segmentation": "off [fixed]", "udp_fragmentation_offload": "off [fixed]", "tx_sctp_segmentation": "off [fixed]", "tx_sit_segmentation": "off [fixed]", "tx_checksum_fcoe_crc": "off [fixed]", "hw_tc_offload": "off [fixed]", "tx_checksum_ip_generic": "on", "tx_fcoe_segmentation": "off [fixed]", "rx_vlan_filter": "on [fixed]", "tx_vlan_offload": "on [fixed]", "receive_hashing": "off [fixed]", "tx_gre_segmentation": "off [fixed]"}, "type": "ether", "pciid": "0000:00:08.0", "module": "e1000", "mtu": 1500, "device": "enp0s8", "promisc": false, "timestamping": ["tx_software", "rx_software", "software"], "ipv4": {"broadcast": "192.168.50.255", "netmask": "255.255.255.0", "network": "192.168.50.0", "address": "192.168.50.14"}, "ipv6": [{"scope": "link", "prefix": "64", "address": "fe80::a00:27ff:fee1:67c"}], "active": true, "speed": 1000, "hw_timestamp_filters": []}, "ansible_interfaces": ["lo", "docker0", "enp0s3", "enp0s8", "veth98d8b4b"], "ansible_selinux": {"status": "enabled", "policyvers": 31, "type": "targeted", "mode": "permissive", "config_mode": "permissive"}, "ansible_enp0s3": {"macaddress": "08:00:27:03:5e:61", "features": {"tx_checksum_ipv4": "off [fixed]", "generic_receive_offload": "on", "tx_checksum_ipv6": "off [fixed]", "tx_scatter_gather_fraglist": "off [fixed]", "rx_all": "off", "highdma": "off [fixed]", "rx_fcs": "off", "tx_lockless": "off [fixed]", "tx_tcp_ecn_segmentation": "off [fixed]", "rx_udp_tunnel_port_offload": "off [fixed]", "tx_tcp6_segmentation": "off [fixed]", "tx_gso_robust": "off [fixed]", "tx_ipip_segmentation": "off [fixed]", "tx_tcp_mangleid_segmentation": "off", "tx_checksumming": "on", "vlan_challenged": "off [fixed]", "loopback": "off [fixed]", "fcoe_mtu": "off [fixed]", "scatter_gather": "on", "tx_checksum_sctp": "off [fixed]", "tx_vlan_stag_hw_insert": "off [fixed]", "rx_vlan_stag_hw_parse": "off [fixed]", "tx_gso_partial": "off [fixed]", "rx_gro_hw": "off [fixed]", "rx_vlan_stag_filter": "off [fixed]", "large_receive_offload": "off [fixed]", "tx_scatter_gather": "on", "rx_checksumming": "off", "tx_tcp_segmentation": "on", "netns_local": "off [fixed]", "busy_poll": "off [fixed]", "generic_segmentation_offload": "on", "tx_udp_tnl_segmentation": "off [fixed]", "tcp_segmentation_offload": "on", "l2_fwd_offload": "off [fixed]", "rx_vlan_offload": "on", "ntuple_filters": "off [fixed]", "tx_gre_csum_segmentation": "off [fixed]", "tx_nocache_copy": "off", "tx_udp_tnl_csum_segmentation": "off [fixed]", "udp_fragmentation_offload": "off [fixed]", "tx_sctp_segmentation": "off [fixed]", "tx_sit_segmentation": "off [fixed]", "tx_checksum_fcoe_crc": "off [fixed]", "hw_tc_offload": "off [fixed]", "tx_checksum_ip_generic": "on", "tx_fcoe_segmentation": "off [fixed]", "rx_vlan_filter": "on [fixed]", "tx_vlan_offload": "on [fixed]", "receive_hashing": "off [fixed]", "tx_gre_segmentation": "off [fixed]"}, "type": "ether", "pciid": "0000:00:03.0", "module": "e1000", "mtu": 1500, "device": "enp0s3", "promisc": false, "timestamping": ["tx_software", "rx_software", "software"], "ipv4": {"broadcast": "10.0.2.255", "netmask": "255.255.255.0", "network": "10.0.2.0", "address": "10.0.2.15"}, "ipv6": [{"scope": "link", "prefix": "64", "address": "fe80::a00:27ff:fe03:5e61"}], "active": true, "speed": 1000, "hw_timestamp_filters": []}, "ansible_fqdn": "webserver", "ansible_mounts": [{"block_used": 50817, "uuid": "25275f32-3cc5-4854-8c22-533e2ba176aa", "size_total": 1063256064, "block_total": 259584, "mount": "/boot", "block_available": 208767, "size_available": 855109632, "fstype": "xfs", "inode_total": 524288, "options": "rw,seclabel,relatime,attr2,inode64,noquota", "device": "/dev/sda1", "inode_used": 338, "block_size": 4096, "inode_available": 523950}, {"block_used": 657411, "uuid": "95bcd4fd-91d3-41ac-b99c-e2bfce10ac9d", "size_total": 53660876800, "block_total": 13100800, "mount": "/", "block_available": 12443389, "size_available": 50968121344, "fstype": "xfs", "inode_total": 26214400, "options": "rw,seclabel,relatime,attr2,inode64,noquota", "device": "/dev/mapper/centos-root", "inode_used": 64689, "block_size": 4096, "inode_available": 26149711}, {"block_used": 8340, "uuid": "99f78074-3361-4312-8699-ab59bccfc55c", "size_total": 30041706496, "block_total": 7334401, "mount": "/home", "block_available": 7326061, "size_available": 30007545856, "fstype": "xfs", "inode_total": 14675968, "options": "rw,seclabel,relatime,attr2,inode64,noquota", "device": "/dev/mapper/centos-home", "inode_used": 16, "block_size": 4096, "inode_available": 14675952}], "ansible_nodename": "webserver", "ansible_lvm": {"pvs": {"/dev/sda2": {"free_g": "0.00", "size_g": "79.00", "vg": "centos"}}, "lvs": {"home": {"size_g": "27.99", "vg": "centos"}, "root": {"size_g": "50.00", "vg": "centos"}, "swap": {"size_g": "1.00", "vg": "centos"}}, "vgs": {"centos": {"free_g": "0.00", "size_g": "79.00", "num_lvs": "3", "num_pvs": "1"}}}, "ansible_domain": "", "ansible_distribution_file_path": "/etc/redhat-release", "ansible_virtualization_type": "virtualbox", "ansible_ssh_host_key_ed25519_public": "AAAAC3NzaC1lZDI1NTE5AAAAIHy086a/oxe9997x3byZWCQ7539rkCsPV76kLJN4bg8O", "ansible_processor_cores": 2, "ansible_bios_version": "VirtualBox", "ansible_date_time": {"weekday_number": "5", "iso8601_basic_short": "20240112T144405", "tz": "UTC", "weeknumber": "02", "hour": "14", "year": "2024", "minute": "44", "tz_offset": "+0000", "month": "01", "epoch": "1705070645", "iso8601_micro": "2024-01-12T14:44:05.419700Z", "weekday": "Friday", "time": "14:44:05", "date": "2024-01-12", "iso8601": "2024-01-12T14:44:05Z", "day": "12", "iso8601_basic": "20240112T144405419700", "second": "05"}, "ansible_distribution_release": "Core", "ansible_os_family": "RedHat", "ansible_effective_user_id": 0, "ansible_product_name": "VirtualBox", "ansible_devices": {"dm-2": {"scheduler_mode": "", "rotational": "1", "vendor": null, "sectors": "58703872", "links": {"masters": [], "labels": [], "ids": ["dm-name-centos-home", "dm-uuid-LVM-FTZwJ2FeoOSji2jb5qzgaZFvkmUIKBQoGiHYMa9MXBUVKXCVnYF2qhvrZM2Rb3lz"], "uuids": ["99f78074-3361-4312-8699-ab59bccfc55c"]}, "sas_device_handle": null, "sas_address": null, "virtual": 1, "host": "", "sectorsize": "512", "removable": "0", "support_discard": "0", "model": null, "partitions": {}, "holders": [], "size": "27.99 GB"}, "sda": {"scheduler_mode": "deadline", "rotational": "1", "vendor": "ATA", "sectors": "167772160", "links": {"masters": [], "labels": [], "ids": ["ata-VBOX_HARDDISK_VB2e85d355-50328e38"], "uuids": []}, "sas_device_handle": null, "sas_address": null, "virtual": 1, "host": "", "sectorsize": "512", "removable": "0", "support_discard": "0", "model": "VBOX HARDDISK", "partitions": {"sda2": {"sectorsize": 512, "uuid": null, "links": {"masters": ["dm-0", "dm-1", "dm-2"], "labels": [], "ids": ["ata-VBOX_HARDDISK_VB2e85d355-50328e38-part2", "lvm-pv-uuid-gEVXsf-G92H-S31z-pTeX-FaiF-vGbM-azCcrK"], "uuids": []}, "sectors": "165672960", "start": "2099200", "holders": ["centos-root", "centos-swap", "centos-home"], "size": "79.00 GB"}, "sda1": {"sectorsize": 512, "uuid": "25275f32-3cc5-4854-8c22-533e2ba176aa", "links": {"masters": [], "labels": [], "ids": ["ata-VBOX_HARDDISK_VB2e85d355-50328e38-part1"], "uuids": ["25275f32-3cc5-4854-8c22-533e2ba176aa"]}, "sectors": "2097152", "start": "2048", "holders": [], "size": "1.00 GB"}}, "holders": [], "size": "80.00 GB"}, "dm-0": {"scheduler_mode": "", "rotational": "1", "vendor": null, "sectors": "104857600", "links": {"masters": [], "labels": [], "ids": ["dm-name-centos-root", "dm-uuid-LVM-FTZwJ2FeoOSji2jb5qzgaZFvkmUIKBQogfVN7PvUZyMIAIZbBsDVqR31eLbCsgOo"], "uuids": ["95bcd4fd-91d3-41ac-b99c-e2bfce10ac9d"]}, "sas_device_handle": null, "sas_address": null, "virtual": 1, "host": "", "sectorsize": "512", "removable": "0", "support_discard": "0", "model": null, "partitions": {}, "holders": [], "size": "50.00 GB"}, "dm-1": {"scheduler_mode": "", "rotational": "1", "vendor": null, "sectors": "2097152", "links": {"masters": [], "labels": [], "ids": ["dm-name-centos-swap", "dm-uuid-LVM-FTZwJ2FeoOSji2jb5qzgaZFvkmUIKBQoMaJ5aBrZWXtfhXH4ShWAqk4J0nFhQiXm"], "uuids": ["61bc2e3f-cad6-4f36-9a8d-23168c13822b"]}, "sas_device_handle": null, "sas_address": null, "virtual": 1, "host": "", "sectorsize": "512", "removable": "0", "support_discard": "0", "model": null, "partitions": {}, "holders": [], "size": "1.00 GB"}}, "ansible_user_uid": 0, "ansible_bios_date": "12/01/2006", "ansible_system_capabilities": ["cap_chown", "cap_dac_override", "cap_dac_read_search", "cap_fowner", "cap_fsetid", "cap_kill", "cap_setgid", "cap_setuid", "cap_setpcap", "cap_linux_immutable", "cap_net_bind_service", "cap_net_broadcast", "cap_net_admin", "cap_net_raw", "cap_ipc_lock", "cap_ipc_owner", "cap_sys_module", "cap_sys_rawio", "cap_sys_chroot", "cap_sys_ptrace", "cap_sys_pacct", "cap_sys_admin", "cap_sys_boot", "cap_sys_nice", "cap_sys_resource", "cap_sys_time", "cap_sys_tty_config", "cap_mknod", "cap_lease", "cap_audit_write", "cap_audit_control", "cap_setfcap", "cap_mac_override", "cap_mac_admin", "cap_syslog", "35", "36+ep"]}}\r\n', 'Shared connection to 192.168.50.14 closed.\r\n')
+2024-01-10 14:12:37,302 p=6424 u=vagrant n=ansible | <192.168.50.14> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-01-10 14:12:37,304 p=6424 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d 192.168.50.14 '/bin/sh -c '"'"'rm -f -r /home/vagrant/.ansible/tmp/ansible-tmp-1704895955.47-6424-193781489877112/ > /dev/null 2>&1 && sleep 0'"'"''
+2024-01-10 14:12:37,355 p=6424 u=vagrant n=ansible | <192.168.50.14> (0, '', '')
+2024-01-10 14:12:37,465 p=6415 u=vagrant n=ansible | ok: [web]
+2024-01-10 14:12:37,505 p=6415 u=vagrant n=ansible | TASK [Install EPEL repo] ********************************************************************************************************************
+2024-01-10 14:12:37,588 p=6447 u=vagrant n=ansible | <192.168.50.14> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-01-10 14:12:37,595 p=6447 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d 192.168.50.14 '/bin/sh -c '"'"'echo ~vagrant && sleep 0'"'"''
+2024-01-10 14:12:37,639 p=6447 u=vagrant n=ansible | <192.168.50.14> (0, '/home/vagrant\n', '')
+2024-01-10 14:12:37,639 p=6447 u=vagrant n=ansible | <192.168.50.14> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-01-10 14:12:37,641 p=6447 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d 192.168.50.14 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/vagrant/.ansible/tmp `"&& mkdir "` echo /home/vagrant/.ansible/tmp/ansible-tmp-1704895957.64-6447-41948409211491 `" && echo ansible-tmp-1704895957.64-6447-41948409211491="` echo /home/vagrant/.ansible/tmp/ansible-tmp-1704895957.64-6447-41948409211491 `" ) && sleep 0'"'"''
+2024-01-10 14:12:37,695 p=6447 u=vagrant n=ansible | <192.168.50.14> (0, 'ansible-tmp-1704895957.64-6447-41948409211491=/home/vagrant/.ansible/tmp/ansible-tmp-1704895957.64-6447-41948409211491\n', '')
+2024-01-10 14:12:38,056 p=6447 u=vagrant n=ansible | Using module file /usr/lib/python2.7/site-packages/ansible/modules/packaging/os/yum.py
+2024-01-10 14:12:38,058 p=6447 u=vagrant n=ansible | <192.168.50.14> PUT /home/vagrant/.ansible/tmp/ansible-local-6415ZdQZvB/tmpraIjiV TO /home/vagrant/.ansible/tmp/ansible-tmp-1704895957.64-6447-41948409211491/AnsiballZ_yum.py
+2024-01-10 14:12:38,060 p=6447 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 sftp -o BatchMode=no -b - -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d '[192.168.50.14]'
+2024-01-10 14:12:38,140 p=6447 u=vagrant n=ansible | <192.168.50.14> (0, 'sftp> put /home/vagrant/.ansible/tmp/ansible-local-6415ZdQZvB/tmpraIjiV /home/vagrant/.ansible/tmp/ansible-tmp-1704895957.64-6447-41948409211491/AnsiballZ_yum.py\n', '')
+2024-01-10 14:12:38,141 p=6447 u=vagrant n=ansible | <192.168.50.14> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-01-10 14:12:38,145 p=6447 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d 192.168.50.14 '/bin/sh -c '"'"'chmod u+x /home/vagrant/.ansible/tmp/ansible-tmp-1704895957.64-6447-41948409211491/ /home/vagrant/.ansible/tmp/ansible-tmp-1704895957.64-6447-41948409211491/AnsiballZ_yum.py && sleep 0'"'"''
+2024-01-10 14:12:38,195 p=6447 u=vagrant n=ansible | <192.168.50.14> (0, '', '')
+2024-01-10 14:12:38,197 p=6447 u=vagrant n=ansible | <192.168.50.14> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-01-10 14:12:38,200 p=6447 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d -tt 192.168.50.14 '/bin/sh -c '"'"'sudo -H -S -n  -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-zeslpzthxgjvcptladnwdjrapzrcfehh ; /usr/bin/python /home/vagrant/.ansible/tmp/ansible-tmp-1704895957.64-6447-41948409211491/AnsiballZ_yum.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+2024-01-10 14:12:38,281 p=6447 u=vagrant n=ansible | Escalation succeeded
+2024-01-10 14:12:39,103 p=6447 u=vagrant n=ansible | <192.168.50.14> (0, '\r\n{"msg": "", "invocation": {"module_args": {"lock_timeout": 30, "update_cache": false, "disable_excludes": null, "exclude": [], "allow_downgrade": false, "disable_gpg_check": false, "conf_file": null, "use_backend": "auto", "state": "present", "disablerepo": [], "releasever": null, "skip_broken": false, "autoremove": false, "download_dir": null, "enable_plugin": [], "installroot": "/", "install_weak_deps": true, "name": ["epel-release"], "download_only": false, "bugfix": false, "list": null, "install_repoquery": true, "update_only": false, "disable_plugin": [], "enablerepo": [], "security": false, "validate_certs": true}}, "changed": false, "results": ["epel-release-7-14.noarch providing epel-release is already installed"], "rc": 0}\r\n', 'Shared connection to 192.168.50.14 closed.\r\n')
+2024-01-10 14:12:39,104 p=6447 u=vagrant n=ansible | <192.168.50.14> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-01-10 14:12:39,106 p=6447 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d 192.168.50.14 '/bin/sh -c '"'"'rm -f -r /home/vagrant/.ansible/tmp/ansible-tmp-1704895957.64-6447-41948409211491/ > /dev/null 2>&1 && sleep 0'"'"''
+2024-01-10 14:12:39,155 p=6447 u=vagrant n=ansible | <192.168.50.14> (0, '', '')
+2024-01-10 14:12:39,170 p=6415 u=vagrant n=ansible | ok: [web] => {
+    "changed": false, 
+    "invocation": {
+        "module_args": {
+            "allow_downgrade": false, 
+            "autoremove": false, 
+            "bugfix": false, 
+            "conf_file": null, 
+            "disable_excludes": null, 
+            "disable_gpg_check": false, 
+            "disable_plugin": [], 
+            "disablerepo": [], 
+            "download_dir": null, 
+            "download_only": false, 
+            "enable_plugin": [], 
+            "enablerepo": [], 
+            "exclude": [], 
+            "install_repoquery": true, 
+            "install_weak_deps": true, 
+            "installroot": "/", 
+            "list": null, 
+            "lock_timeout": 30, 
+            "name": [
+                "epel-release"
+            ], 
+            "releasever": null, 
+            "security": false, 
+            "skip_broken": false, 
+            "state": "present", 
+            "update_cache": false, 
+            "update_only": false, 
+            "use_backend": "auto", 
+            "validate_certs": true
+        }
+    }, 
+    "msg": "", 
+    "rc": 0, 
+    "results": [
+        "epel-release-7-14.noarch providing epel-release is already installed"
+    ]
+}
+2024-01-10 14:12:39,217 p=6415 u=vagrant n=ansible | TASK [Download pip script] ******************************************************************************************************************
+2024-01-10 14:12:39,243 p=6463 u=vagrant n=ansible | <192.168.50.14> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-01-10 14:12:39,253 p=6463 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d 192.168.50.14 '/bin/sh -c '"'"'echo ~vagrant && sleep 0'"'"''
+2024-01-10 14:12:39,298 p=6463 u=vagrant n=ansible | <192.168.50.14> (0, '/home/vagrant\n', '')
+2024-01-10 14:12:39,299 p=6463 u=vagrant n=ansible | <192.168.50.14> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-01-10 14:12:39,302 p=6463 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d 192.168.50.14 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/vagrant/.ansible/tmp `"&& mkdir "` echo /home/vagrant/.ansible/tmp/ansible-tmp-1704895959.3-6463-221463689851992 `" && echo ansible-tmp-1704895959.3-6463-221463689851992="` echo /home/vagrant/.ansible/tmp/ansible-tmp-1704895959.3-6463-221463689851992 `" ) && sleep 0'"'"''
+2024-01-10 14:12:39,353 p=6463 u=vagrant n=ansible | <192.168.50.14> (0, 'ansible-tmp-1704895959.3-6463-221463689851992=/home/vagrant/.ansible/tmp/ansible-tmp-1704895959.3-6463-221463689851992\n', '')
+2024-01-10 14:12:39,670 p=6463 u=vagrant n=ansible | Using module file /usr/lib/python2.7/site-packages/ansible/modules/net_tools/basics/get_url.py
+2024-01-10 14:12:39,671 p=6463 u=vagrant n=ansible | <192.168.50.14> PUT /home/vagrant/.ansible/tmp/ansible-local-6415ZdQZvB/tmpSZ4mTk TO /home/vagrant/.ansible/tmp/ansible-tmp-1704895959.3-6463-221463689851992/AnsiballZ_get_url.py
+2024-01-10 14:12:39,673 p=6463 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 sftp -o BatchMode=no -b - -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d '[192.168.50.14]'
+2024-01-10 14:12:39,749 p=6463 u=vagrant n=ansible | <192.168.50.14> (0, 'sftp> put /home/vagrant/.ansible/tmp/ansible-local-6415ZdQZvB/tmpSZ4mTk /home/vagrant/.ansible/tmp/ansible-tmp-1704895959.3-6463-221463689851992/AnsiballZ_get_url.py\n', '')
+2024-01-10 14:12:39,751 p=6463 u=vagrant n=ansible | <192.168.50.14> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-01-10 14:12:39,754 p=6463 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d 192.168.50.14 '/bin/sh -c '"'"'chmod u+x /home/vagrant/.ansible/tmp/ansible-tmp-1704895959.3-6463-221463689851992/ /home/vagrant/.ansible/tmp/ansible-tmp-1704895959.3-6463-221463689851992/AnsiballZ_get_url.py && sleep 0'"'"''
+2024-01-10 14:12:39,806 p=6463 u=vagrant n=ansible | <192.168.50.14> (0, '', '')
+2024-01-10 14:12:39,807 p=6463 u=vagrant n=ansible | <192.168.50.14> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-01-10 14:12:39,808 p=6463 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d -tt 192.168.50.14 '/bin/sh -c '"'"'sudo -H -S -n  -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-wjdjmkehvsdnehdipcybstdrwppzncdc ; /usr/bin/python /home/vagrant/.ansible/tmp/ansible-tmp-1704895959.3-6463-221463689851992/AnsiballZ_get_url.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+2024-01-10 14:12:39,893 p=6463 u=vagrant n=ansible | Escalation succeeded
+2024-01-10 14:12:41,400 p=6463 u=vagrant n=ansible | <192.168.50.14> (0, '\r\n{"group": "root", "uid": 0, "url": "https://bootstrap.pypa.io/pip/2.7/get-pip.py", "changed": false, "elapsed": 0, "dest": "/tmp/get-pip.py", "state": "file", "gid": 0, "secontext": "unconfined_u:object_r:user_tmp_t:s0", "mode": "0644", "invocation": {"module_args": {"directory_mode": null, "force": false, "remote_src": null, "owner": null, "follow": false, "client_key": null, "group": null, "use_proxy": true, "unsafe_writes": false, "serole": null, "content": null, "validate_certs": true, "setype": null, "client_cert": null, "timeout": 10, "url_password": null, "dest": "/tmp/get-pip.py", "selevel": null, "force_basic_auth": false, "sha256sum": "", "http_agent": "ansible-httpget", "regexp": null, "src": null, "url": "https://bootstrap.pypa.io/pip/2.7/get-pip.py", "checksum": "", "seuser": null, "headers": null, "delimiter": null, "mode": null, "url_username": null, "attributes": null, "backup": null, "tmp_dest": null}}, "owner": "root", "size": 1908226, "msg": "HTTP Error 304: Not Modified"}\r\n', 'Shared connection to 192.168.50.14 closed.\r\n')
+2024-01-10 14:12:41,403 p=6463 u=vagrant n=ansible | <192.168.50.14> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-01-10 14:12:41,406 p=6463 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d 192.168.50.14 '/bin/sh -c '"'"'rm -f -r /home/vagrant/.ansible/tmp/ansible-tmp-1704895959.3-6463-221463689851992/ > /dev/null 2>&1 && sleep 0'"'"''
+2024-01-10 14:12:41,456 p=6463 u=vagrant n=ansible | <192.168.50.14> (0, '', '')
+2024-01-10 14:12:41,471 p=6415 u=vagrant n=ansible | ok: [web] => {
+    "changed": false, 
+    "dest": "/tmp/get-pip.py", 
+    "elapsed": 0, 
+    "gid": 0, 
+    "group": "root", 
+    "invocation": {
+        "module_args": {
+            "attributes": null, 
+            "backup": null, 
+            "checksum": "", 
+            "client_cert": null, 
+            "client_key": null, 
+            "content": null, 
+            "delimiter": null, 
+            "dest": "/tmp/get-pip.py", 
+            "directory_mode": null, 
+            "follow": false, 
+            "force": false, 
+            "force_basic_auth": false, 
+            "group": null, 
+            "headers": null, 
+            "http_agent": "ansible-httpget", 
+            "mode": null, 
+            "owner": null, 
+            "regexp": null, 
+            "remote_src": null, 
+            "selevel": null, 
+            "serole": null, 
+            "setype": null, 
+            "seuser": null, 
+            "sha256sum": "", 
+            "src": null, 
+            "timeout": 10, 
+            "tmp_dest": null, 
+            "unsafe_writes": false, 
+            "url": "https://bootstrap.pypa.io/pip/2.7/get-pip.py", 
+            "url_password": null, 
+            "url_username": null, 
+            "use_proxy": true, 
+            "validate_certs": true
+        }
+    }, 
+    "mode": "0644", 
+    "msg": "HTTP Error 304: Not Modified", 
+    "owner": "root", 
+    "secontext": "unconfined_u:object_r:user_tmp_t:s0", 
+    "size": 1908226, 
+    "state": "file", 
+    "uid": 0, 
+    "url": "https://bootstrap.pypa.io/pip/2.7/get-pip.py"
+}
+2024-01-10 14:12:41,520 p=6415 u=vagrant n=ansible | TASK [Install python-pip] *******************************************************************************************************************
+2024-01-10 14:12:41,548 p=6479 u=vagrant n=ansible | <192.168.50.14> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-01-10 14:12:41,558 p=6479 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d 192.168.50.14 '/bin/sh -c '"'"'echo ~vagrant && sleep 0'"'"''
+2024-01-10 14:12:41,603 p=6479 u=vagrant n=ansible | <192.168.50.14> (0, '/home/vagrant\n', '')
+2024-01-10 14:12:41,604 p=6479 u=vagrant n=ansible | <192.168.50.14> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-01-10 14:12:41,606 p=6479 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d 192.168.50.14 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/vagrant/.ansible/tmp `"&& mkdir "` echo /home/vagrant/.ansible/tmp/ansible-tmp-1704895961.6-6479-5620134941454 `" && echo ansible-tmp-1704895961.6-6479-5620134941454="` echo /home/vagrant/.ansible/tmp/ansible-tmp-1704895961.6-6479-5620134941454 `" ) && sleep 0'"'"''
+2024-01-10 14:12:41,658 p=6479 u=vagrant n=ansible | <192.168.50.14> (0, 'ansible-tmp-1704895961.6-6479-5620134941454=/home/vagrant/.ansible/tmp/ansible-tmp-1704895961.6-6479-5620134941454\n', '')
+2024-01-10 14:12:42,093 p=6479 u=vagrant n=ansible | Using module file /usr/lib/python2.7/site-packages/ansible/modules/commands/command.py
+2024-01-10 14:12:42,094 p=6479 u=vagrant n=ansible | <192.168.50.14> PUT /home/vagrant/.ansible/tmp/ansible-local-6415ZdQZvB/tmpCeXXMA TO /home/vagrant/.ansible/tmp/ansible-tmp-1704895961.6-6479-5620134941454/AnsiballZ_command.py
+2024-01-10 14:12:42,097 p=6479 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 sftp -o BatchMode=no -b - -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d '[192.168.50.14]'
+2024-01-10 14:12:42,183 p=6479 u=vagrant n=ansible | <192.168.50.14> (0, 'sftp> put /home/vagrant/.ansible/tmp/ansible-local-6415ZdQZvB/tmpCeXXMA /home/vagrant/.ansible/tmp/ansible-tmp-1704895961.6-6479-5620134941454/AnsiballZ_command.py\n', '')
+2024-01-10 14:12:42,183 p=6479 u=vagrant n=ansible | <192.168.50.14> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-01-10 14:12:42,185 p=6479 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d 192.168.50.14 '/bin/sh -c '"'"'chmod u+x /home/vagrant/.ansible/tmp/ansible-tmp-1704895961.6-6479-5620134941454/ /home/vagrant/.ansible/tmp/ansible-tmp-1704895961.6-6479-5620134941454/AnsiballZ_command.py && sleep 0'"'"''
+2024-01-10 14:12:42,241 p=6479 u=vagrant n=ansible | <192.168.50.14> (0, '', '')
+2024-01-10 14:12:42,243 p=6479 u=vagrant n=ansible | <192.168.50.14> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-01-10 14:12:42,250 p=6479 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d -tt 192.168.50.14 '/bin/sh -c '"'"'sudo -H -S -n  -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-rkylcirjxhegwykhescgckhhtqkwwdzp ; /usr/bin/python /home/vagrant/.ansible/tmp/ansible-tmp-1704895961.6-6479-5620134941454/AnsiballZ_command.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+2024-01-10 14:12:42,352 p=6479 u=vagrant n=ansible | Escalation succeeded
+2024-01-10 14:12:51,142 p=6479 u=vagrant n=ansible | <192.168.50.14> (0, '\r\n{"changed": true, "end": "2024-01-12 14:44:18.263121", "stdout": "Collecting pip<21.0\\n  Using cached pip-20.3.4-py2.py3-none-any.whl (1.5 MB)\\nInstalling collected packages: pip\\n  Attempting uninstall: pip\\n    Found existing installation: pip 20.3.4\\n    Uninstalling pip-20.3.4:\\n      Successfully uninstalled pip-20.3.4\\nSuccessfully installed pip-20.3.4", "cmd": ["python2.7", "/tmp/get-pip.py"], "rc": 0, "start": "2024-01-12 14:44:10.338743", "stderr": "DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. pip 21.0 will drop support for Python 2.7 in January 2021. More details about Python 2 support in pip can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support pip 21.0 will remove support for this functionality.", "delta": "0:00:07.924378", "invocation": {"module_args": {"creates": null, "executable": null, "_uses_shell": false, "strip_empty_ends": true, "_raw_params": "python2.7 /tmp/get-pip.py", "removes": null, "argv": null, "warn": true, "chdir": null, "stdin_add_newline": true, "stdin": null}}}\r\n', 'Shared connection to 192.168.50.14 closed.\r\n')
+2024-01-10 14:12:51,144 p=6479 u=vagrant n=ansible | <192.168.50.14> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-01-10 14:12:51,146 p=6479 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d 192.168.50.14 '/bin/sh -c '"'"'rm -f -r /home/vagrant/.ansible/tmp/ansible-tmp-1704895961.6-6479-5620134941454/ > /dev/null 2>&1 && sleep 0'"'"''
+2024-01-10 14:12:51,194 p=6479 u=vagrant n=ansible | <192.168.50.14> (0, '', '')
+2024-01-10 14:12:51,208 p=6415 u=vagrant n=ansible | changed: [web] => {
+    "changed": true, 
+    "cmd": [
+        "python2.7", 
+        "/tmp/get-pip.py"
+    ], 
+    "delta": "0:00:07.924378", 
+    "end": "2024-01-12 14:44:18.263121", 
+    "invocation": {
+        "module_args": {
+            "_raw_params": "python2.7 /tmp/get-pip.py", 
+            "_uses_shell": false, 
+            "argv": null, 
+            "chdir": null, 
+            "creates": null, 
+            "executable": null, 
+            "removes": null, 
+            "stdin": null, 
+            "stdin_add_newline": true, 
+            "strip_empty_ends": true, 
+            "warn": true
+        }
+    }, 
+    "rc": 0, 
+    "start": "2024-01-12 14:44:10.338743", 
+    "stderr": "DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. pip 21.0 will drop support for Python 2.7 in January 2021. More details about Python 2 support in pip can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support pip 21.0 will remove support for this functionality.", 
+    "stderr_lines": [
+        "DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. pip 21.0 will drop support for Python 2.7 in January 2021. More details about Python 2 support in pip can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support pip 21.0 will remove support for this functionality."
+    ], 
+    "stdout": "Collecting pip<21.0\n  Using cached pip-20.3.4-py2.py3-none-any.whl (1.5 MB)\nInstalling collected packages: pip\n  Attempting uninstall: pip\n    Found existing installation: pip 20.3.4\n    Uninstalling pip-20.3.4:\n      Successfully uninstalled pip-20.3.4\nSuccessfully installed pip-20.3.4", 
+    "stdout_lines": [
+        "Collecting pip<21.0", 
+        "  Using cached pip-20.3.4-py2.py3-none-any.whl (1.5 MB)", 
+        "Installing collected packages: pip", 
+        "  Attempting uninstall: pip", 
+        "    Found existing installation: pip 20.3.4", 
+        "    Uninstalling pip-20.3.4:", 
+        "      Successfully uninstalled pip-20.3.4", 
+        "Successfully installed pip-20.3.4"
+    ]
+}
+2024-01-10 14:12:51,257 p=6415 u=vagrant n=ansible | TASK [Install docker python] ****************************************************************************************************************
+2024-01-10 14:12:51,357 p=6496 u=vagrant n=ansible | <192.168.50.14> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-01-10 14:12:51,375 p=6496 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d 192.168.50.14 '/bin/sh -c '"'"'echo ~vagrant && sleep 0'"'"''
+2024-01-10 14:12:51,505 p=6496 u=vagrant n=ansible | <192.168.50.14> (0, '/home/vagrant\n', '')
+2024-01-10 14:12:51,506 p=6496 u=vagrant n=ansible | <192.168.50.14> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-01-10 14:12:51,513 p=6496 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d 192.168.50.14 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/vagrant/.ansible/tmp `"&& mkdir "` echo /home/vagrant/.ansible/tmp/ansible-tmp-1704895971.51-6496-188086004682965 `" && echo ansible-tmp-1704895971.51-6496-188086004682965="` echo /home/vagrant/.ansible/tmp/ansible-tmp-1704895971.51-6496-188086004682965 `" ) && sleep 0'"'"''
+2024-01-10 14:12:51,595 p=6496 u=vagrant n=ansible | <192.168.50.14> (0, 'ansible-tmp-1704895971.51-6496-188086004682965=/home/vagrant/.ansible/tmp/ansible-tmp-1704895971.51-6496-188086004682965\n', '')
+2024-01-10 14:12:52,203 p=6496 u=vagrant n=ansible | Using module file /usr/lib/python2.7/site-packages/ansible/modules/packaging/language/pip.py
+2024-01-10 14:12:52,204 p=6496 u=vagrant n=ansible | <192.168.50.14> PUT /home/vagrant/.ansible/tmp/ansible-local-6415ZdQZvB/tmpAuw7Nv TO /home/vagrant/.ansible/tmp/ansible-tmp-1704895971.51-6496-188086004682965/AnsiballZ_pip.py
+2024-01-10 14:12:52,208 p=6496 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 sftp -o BatchMode=no -b - -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d '[192.168.50.14]'
+2024-01-10 14:12:52,354 p=6496 u=vagrant n=ansible | <192.168.50.14> (0, 'sftp> put /home/vagrant/.ansible/tmp/ansible-local-6415ZdQZvB/tmpAuw7Nv /home/vagrant/.ansible/tmp/ansible-tmp-1704895971.51-6496-188086004682965/AnsiballZ_pip.py\n', '')
+2024-01-10 14:12:52,356 p=6496 u=vagrant n=ansible | <192.168.50.14> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-01-10 14:12:52,362 p=6496 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d 192.168.50.14 '/bin/sh -c '"'"'chmod u+x /home/vagrant/.ansible/tmp/ansible-tmp-1704895971.51-6496-188086004682965/ /home/vagrant/.ansible/tmp/ansible-tmp-1704895971.51-6496-188086004682965/AnsiballZ_pip.py && sleep 0'"'"''
+2024-01-10 14:12:52,442 p=6496 u=vagrant n=ansible | <192.168.50.14> (0, '', '')
+2024-01-10 14:12:52,442 p=6496 u=vagrant n=ansible | <192.168.50.14> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-01-10 14:12:52,444 p=6496 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d -tt 192.168.50.14 '/bin/sh -c '"'"'sudo -H -S -n  -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-kqislhuntblgjgepiflnfcgavplsiksp ; /usr/bin/python /home/vagrant/.ansible/tmp/ansible-tmp-1704895971.51-6496-188086004682965/AnsiballZ_pip.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+2024-01-10 14:12:52,558 p=6496 u=vagrant n=ansible | Escalation succeeded
+2024-01-10 14:12:54,289 p=6496 u=vagrant n=ansible | <192.168.50.14> (0, '\r\n{"virtualenv": null, "changed": false, "requirements": null, "name": ["docker-py"], "stdout": "Requirement already satisfied: docker-py in /usr/lib/python2.7/site-packages (1.10.6)\\nRequirement already satisfied: docker-pycreds>=0.2.1 in /usr/lib/python2.7/site-packages (from docker-py) (0.4.0)\\nRequirement already satisfied: websocket-client>=0.32.0 in /usr/lib/python2.7/site-packages (from docker-py) (0.59.0)\\nRequirement already satisfied: requests!=2.11.0,>=2.5.2 in /usr/lib/python2.7/site-packages (from docker-py) (2.27.1)\\nRequirement already satisfied: six>=1.4.0 in /usr/lib/python2.7/site-packages (from docker-py) (1.9.0)\\nRequirement already satisfied: backports.ssl-match-hostname>=3.5; python_version < \\"3.5\\" in /usr/lib/python2.7/site-packages (from docker-py) (3.5.0.1)\\nRequirement already satisfied: ipaddress>=1.0.16; python_version < \\"3.3\\" in /usr/lib/python2.7/site-packages (from docker-py) (1.0.16)\\nRequirement already satisfied: certifi>=2017.4.17 in /usr/lib/python2.7/site-packages (from requests!=2.11.0,>=2.5.2->docker-py) (2021.10.8)\\nRequirement already satisfied: urllib3<1.27,>=1.21.1 in /usr/lib/python2.7/site-packages (from requests!=2.11.0,>=2.5.2->docker-py) (1.26.18)\\nRequirement already satisfied: idna<3,>=2.5; python_version < \\"3\\" in /usr/lib/python2.7/site-packages (from requests!=2.11.0,>=2.5.2->docker-py) (2.10)\\nRequirement already satisfied: chardet<5,>=3.0.2; python_version < \\"3\\" in /usr/lib/python2.7/site-packages (from requests!=2.11.0,>=2.5.2->docker-py) (4.0.0)\\n", "cmd": ["/bin/pip2", "install", "docker-py"], "state": "present", "version": null, "stderr": "DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. pip 21.0 will drop support for Python 2.7 in January 2021. More details about Python 2 support in pip can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support pip 21.0 will remove support for this functionality.\\n", "invocation": {"module_args": {"virtualenv": null, "extra_args": null, "virtualenv_command": "virtualenv", "chdir": null, "requirements": null, "name": ["docker-py"], "virtualenv_python": null, "umask": null, "editable": false, "executable": null, "virtualenv_site_packages": false, "state": "present", "version": null}}}\r\n', 'Shared connection to 192.168.50.14 closed.\r\n')
+2024-01-10 14:12:54,293 p=6496 u=vagrant n=ansible | <192.168.50.14> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-01-10 14:12:54,296 p=6496 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d 192.168.50.14 '/bin/sh -c '"'"'rm -f -r /home/vagrant/.ansible/tmp/ansible-tmp-1704895971.51-6496-188086004682965/ > /dev/null 2>&1 && sleep 0'"'"''
+2024-01-10 14:12:54,355 p=6496 u=vagrant n=ansible | <192.168.50.14> (0, '', '')
+2024-01-10 14:12:54,370 p=6415 u=vagrant n=ansible | ok: [web] => {
+    "changed": false, 
+    "cmd": [
+        "/bin/pip2", 
+        "install", 
+        "docker-py"
+    ], 
+    "invocation": {
+        "module_args": {
+            "chdir": null, 
+            "editable": false, 
+            "executable": null, 
+            "extra_args": null, 
+            "name": [
+                "docker-py"
+            ], 
+            "requirements": null, 
+            "state": "present", 
+            "umask": null, 
+            "version": null, 
+            "virtualenv": null, 
+            "virtualenv_command": "virtualenv", 
+            "virtualenv_python": null, 
+            "virtualenv_site_packages": false
+        }
+    }, 
+    "name": [
+        "docker-py"
+    ], 
+    "requirements": null, 
+    "state": "present", 
+    "stderr": "DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. pip 21.0 will drop support for Python 2.7 in January 2021. More details about Python 2 support in pip can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support pip 21.0 will remove support for this functionality.\n", 
+    "stderr_lines": [
+        "DEPRECATION: Python 2.7 reached the end of its life on January 1st, 2020. Please upgrade your Python as Python 2.7 is no longer maintained. pip 21.0 will drop support for Python 2.7 in January 2021. More details about Python 2 support in pip can be found at https://pip.pypa.io/en/latest/development/release-process/#python-2-support pip 21.0 will remove support for this functionality."
+    ], 
+    "stdout": "Requirement already satisfied: docker-py in /usr/lib/python2.7/site-packages (1.10.6)\nRequirement already satisfied: docker-pycreds>=0.2.1 in /usr/lib/python2.7/site-packages (from docker-py) (0.4.0)\nRequirement already satisfied: websocket-client>=0.32.0 in /usr/lib/python2.7/site-packages (from docker-py) (0.59.0)\nRequirement already satisfied: requests!=2.11.0,>=2.5.2 in /usr/lib/python2.7/site-packages (from docker-py) (2.27.1)\nRequirement already satisfied: six>=1.4.0 in /usr/lib/python2.7/site-packages (from docker-py) (1.9.0)\nRequirement already satisfied: backports.ssl-match-hostname>=3.5; python_version < \"3.5\" in /usr/lib/python2.7/site-packages (from docker-py) (3.5.0.1)\nRequirement already satisfied: ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.7/site-packages (from docker-py) (1.0.16)\nRequirement already satisfied: certifi>=2017.4.17 in /usr/lib/python2.7/site-packages (from requests!=2.11.0,>=2.5.2->docker-py) (2021.10.8)\nRequirement already satisfied: urllib3<1.27,>=1.21.1 in /usr/lib/python2.7/site-packages (from requests!=2.11.0,>=2.5.2->docker-py) (1.26.18)\nRequirement already satisfied: idna<3,>=2.5; python_version < \"3\" in /usr/lib/python2.7/site-packages (from requests!=2.11.0,>=2.5.2->docker-py) (2.10)\nRequirement already satisfied: chardet<5,>=3.0.2; python_version < \"3\" in /usr/lib/python2.7/site-packages (from requests!=2.11.0,>=2.5.2->docker-py) (4.0.0)\n", 
+    "stdout_lines": [
+        "Requirement already satisfied: docker-py in /usr/lib/python2.7/site-packages (1.10.6)", 
+        "Requirement already satisfied: docker-pycreds>=0.2.1 in /usr/lib/python2.7/site-packages (from docker-py) (0.4.0)", 
+        "Requirement already satisfied: websocket-client>=0.32.0 in /usr/lib/python2.7/site-packages (from docker-py) (0.59.0)", 
+        "Requirement already satisfied: requests!=2.11.0,>=2.5.2 in /usr/lib/python2.7/site-packages (from docker-py) (2.27.1)", 
+        "Requirement already satisfied: six>=1.4.0 in /usr/lib/python2.7/site-packages (from docker-py) (1.9.0)", 
+        "Requirement already satisfied: backports.ssl-match-hostname>=3.5; python_version < \"3.5\" in /usr/lib/python2.7/site-packages (from docker-py) (3.5.0.1)", 
+        "Requirement already satisfied: ipaddress>=1.0.16; python_version < \"3.3\" in /usr/lib/python2.7/site-packages (from docker-py) (1.0.16)", 
+        "Requirement already satisfied: certifi>=2017.4.17 in /usr/lib/python2.7/site-packages (from requests!=2.11.0,>=2.5.2->docker-py) (2021.10.8)", 
+        "Requirement already satisfied: urllib3<1.27,>=1.21.1 in /usr/lib/python2.7/site-packages (from requests!=2.11.0,>=2.5.2->docker-py) (1.26.18)", 
+        "Requirement already satisfied: idna<3,>=2.5; python_version < \"3\" in /usr/lib/python2.7/site-packages (from requests!=2.11.0,>=2.5.2->docker-py) (2.10)", 
+        "Requirement already satisfied: chardet<5,>=3.0.2; python_version < \"3\" in /usr/lib/python2.7/site-packages (from requests!=2.11.0,>=2.5.2->docker-py) (4.0.0)"
+    ], 
+    "version": null, 
+    "virtualenv": null
+}
+2024-01-10 14:12:54,372 p=6415 u=vagrant n=ansible | META: ran handlers
+2024-01-10 14:12:54,425 p=6415 u=vagrant n=ansible | TASK [Create Apache Conteneur] **************************************************************************************************************
+2024-01-10 14:12:54,456 p=6512 u=vagrant n=ansible | <192.168.50.14> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-01-10 14:12:54,464 p=6512 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d 192.168.50.14 '/bin/sh -c '"'"'echo ~vagrant && sleep 0'"'"''
+2024-01-10 14:12:54,512 p=6512 u=vagrant n=ansible | <192.168.50.14> (0, '/home/vagrant\n', '')
+2024-01-10 14:12:54,513 p=6512 u=vagrant n=ansible | <192.168.50.14> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-01-10 14:12:54,515 p=6512 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d 192.168.50.14 '/bin/sh -c '"'"'( umask 77 && mkdir -p "` echo /home/vagrant/.ansible/tmp `"&& mkdir "` echo /home/vagrant/.ansible/tmp/ansible-tmp-1704895974.51-6512-268545670670610 `" && echo ansible-tmp-1704895974.51-6512-268545670670610="` echo /home/vagrant/.ansible/tmp/ansible-tmp-1704895974.51-6512-268545670670610 `" ) && sleep 0'"'"''
+2024-01-10 14:12:54,566 p=6512 u=vagrant n=ansible | <192.168.50.14> (0, 'ansible-tmp-1704895974.51-6512-268545670670610=/home/vagrant/.ansible/tmp/ansible-tmp-1704895974.51-6512-268545670670610\n', '')
+2024-01-10 14:12:54,977 p=6512 u=vagrant n=ansible | Using module file /usr/lib/python2.7/site-packages/ansible/modules/cloud/docker/docker_container.py
+2024-01-10 14:12:54,978 p=6512 u=vagrant n=ansible | <192.168.50.14> PUT /home/vagrant/.ansible/tmp/ansible-local-6415ZdQZvB/tmpPM42xl TO /home/vagrant/.ansible/tmp/ansible-tmp-1704895974.51-6512-268545670670610/AnsiballZ_docker_container.py
+2024-01-10 14:12:54,980 p=6512 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 sftp -o BatchMode=no -b - -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d '[192.168.50.14]'
+2024-01-10 14:12:55,057 p=6512 u=vagrant n=ansible | <192.168.50.14> (0, 'sftp> put /home/vagrant/.ansible/tmp/ansible-local-6415ZdQZvB/tmpPM42xl /home/vagrant/.ansible/tmp/ansible-tmp-1704895974.51-6512-268545670670610/AnsiballZ_docker_container.py\n', '')
+2024-01-10 14:12:55,058 p=6512 u=vagrant n=ansible | <192.168.50.14> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-01-10 14:12:55,059 p=6512 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d 192.168.50.14 '/bin/sh -c '"'"'chmod u+x /home/vagrant/.ansible/tmp/ansible-tmp-1704895974.51-6512-268545670670610/ /home/vagrant/.ansible/tmp/ansible-tmp-1704895974.51-6512-268545670670610/AnsiballZ_docker_container.py && sleep 0'"'"''
+2024-01-10 14:12:55,107 p=6512 u=vagrant n=ansible | <192.168.50.14> (0, '', '')
+2024-01-10 14:12:55,108 p=6512 u=vagrant n=ansible | <192.168.50.14> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-01-10 14:12:55,111 p=6512 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d -tt 192.168.50.14 '/bin/sh -c '"'"'sudo -H -S -n  -u root /bin/sh -c '"'"'"'"'"'"'"'"'echo BECOME-SUCCESS-roaqtebjkaxsrpcsmfxmfmzbtgytpvdz ; /usr/bin/python /home/vagrant/.ansible/tmp/ansible-tmp-1704895974.51-6512-268545670670610/AnsiballZ_docker_container.py'"'"'"'"'"'"'"'"' && sleep 0'"'"''
+2024-01-10 14:12:55,196 p=6512 u=vagrant n=ansible | Escalation succeeded
+2024-01-10 14:12:55,860 p=6512 u=vagrant n=ansible | <192.168.50.14> (0, '\r\n{"invocation": {"module_args": {"tty": false, "dns_servers": null, "labels": null, "docker_host": "unix://var/run/docker.sock", "cpuset_cpus": null, "force_kill": false, "networks": null, "detach": true, "debug": false, "device_read_bps": null, "capabilities": null, "init": false, "volumes_from": null, "log_options": null, "device_write_iops": null, "network_mode": null, "tmpfs": null, "restart": false, "name": "webapp", "privileged": false, "timeout": 60, "mounts": null, "validate_certs": false, "ports": ["80:80"], "ulimits": null, "cpu_shares": null, "dns_search_domains": null, "env_file": null, "cpu_quota": null, "cpuset_mems": null, "state": "started", "oom_killer": null, "networks_cli_compatible": null, "api_version": "auto", "exposed_ports": null, "shm_size": null, "tls_hostname": "localhost", "volume_driver": null, "restart_retries": null, "groups": null, "tls": false, "ignore_image": false, "sysctls": null, "ipc_mode": null, "runtime": null, "keep_volumes": true, "image": "httpd", "recreate": false, "pids_limit": null, "pid_mode": null, "cpu_period": null, "domainname": null, "mac_address": null, "memory": "0", "memory_swappiness": null, "memory_swap": null, "pull": false, "stop_signal": null, "devices": null, "uts": null, "blkio_weight": null, "published_ports": ["80:80"], "cap_drop": null, "interactive": false, "links": null, "oom_score_adj": null, "restart_policy": null, "paused": false, "stop_timeout": null, "security_opts": null, "client_key": null, "read_only": false, "hostname": null, "dns_opts": null, "working_dir": null, "cleanup": false, "entrypoint": null, "env": null, "memory_reservation": null, "client_cert": null, "trust_image_content": false, "auto_remove": false, "log_driver": null, "ca_cert": null, "healthcheck": null, "kill_signal": null, "user": null, "userns_mode": null, "purge_networks": false, "output_logs": false, "device_read_iops": null, "ssl_version": null, "kernel_memory": null, "etc_hosts": null, "command": null, "volumes": null, "comparisons": null, "device_write_bps": null}}, "changed": false, "container": {"Platform": "linux", "State": {"Status": "running", "Pid": 11340, "OOMKilled": false, "Dead": false, "Paused": false, "Running": true, "FinishedAt": "0001-01-01T00:00:00Z", "Restarting": false, "Error": "", "StartedAt": "2024-01-12T13:58:09.832813769Z", "ExitCode": 0}, "Config": {"Tty": false, "Cmd": ["httpd-foreground"], "Volumes": null, "Domainname": "", "WorkingDir": "/usr/local/apache2", "Image": "httpd", "Hostname": "8f9a1e1cd80c", "StdinOnce": false, "StopSignal": "SIGWINCH", "Labels": {}, "AttachStdin": false, "User": "", "Env": ["PATH=/usr/local/apache2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin", "HTTPD_PREFIX=/usr/local/apache2", "HTTPD_VERSION=2.4.58", "HTTPD_SHA256=fa16d72a078210a54c47dd5bef2f8b9b8a01d94909a51453956b3ec6442ea4c5", "HTTPD_PATCHES="], "ExposedPorts": {"80/tcp": {}}, "OnBuild": null, "AttachStderr": false, "Entrypoint": null, "AttachStdout": false, "OpenStdin": false}, "ResolvConfPath": "/var/lib/docker/containers/8f9a1e1cd80c5389f563f9c6e8299c9cab86a24d6562a24e62dc78952092da73/resolv.conf", "HostsPath": "/var/lib/docker/containers/8f9a1e1cd80c5389f563f9c6e8299c9cab86a24d6562a24e62dc78952092da73/hosts", "Args": [], "Driver": "overlay2", "Path": "httpd-foreground", "HostnamePath": "/var/lib/docker/containers/8f9a1e1cd80c5389f563f9c6e8299c9cab86a24d6562a24e62dc78952092da73/hostname", "RestartCount": 0, "Name": "/webapp", "Created": "2024-01-12T13:58:09.080589045Z", "ExecIDs": null, "GraphDriver": {"Data": {"MergedDir": "/var/lib/docker/overlay2/de93ede9fef7909bb7abe56610f903e737f82b909d70d9c0931be142662a8e3d/merged", "WorkDir": "/var/lib/docker/overlay2/de93ede9fef7909bb7abe56610f903e737f82b909d70d9c0931be142662a8e3d/work", "LowerDir": "/var/lib/docker/overlay2/de93ede9fef7909bb7abe56610f903e737f82b909d70d9c0931be142662a8e3d-init/diff:/var/lib/docker/overlay2/a947575065468f0800fb652fc5170093938f9a6bc4020168e4988e2cea3b5445/diff:/var/lib/docker/overlay2/e5c68e7ff1516bfd8c0f8db0ae8642ca4a25599833e1d972eb1335a61246c0aa/diff:/var/lib/docker/overlay2/b250498ec8ce7faa991777f661f2e539d3895cf70ce4f2d6f0ab462f459944ee/diff:/var/lib/docker/overlay2/f7bd966c54a0b0bcd97a356a267cba8578dd0baa177216f8bd30ffedd5a8181a/diff:/var/lib/docker/overlay2/6454bf855278dbb8894a23fc0e86b93fcf7b8de2d39ecfd589d485788964a12d/diff:/var/lib/docker/overlay2/5f7c043fbdd75e36e9f6de9b5325bfe614cb11adcf3a36441643e841527bda86/diff", "UpperDir": "/var/lib/docker/overlay2/de93ede9fef7909bb7abe56610f903e737f82b909d70d9c0931be142662a8e3d/diff"}, "Name": "overlay2"}, "Mounts": [], "ProcessLabel": "", "NetworkSettings": {"Bridge": "", "Networks": {"bridge": {"NetworkID": "e1d7c07de42d1ef50c0aff734a575e2ddd13fa36fab10d1e324d0c96f94949de", "MacAddress": "02:42:ac:11:00:02", "GlobalIPv6PrefixLen": 0, "Links": null, "GlobalIPv6Address": "", "IPv6Gateway": "", "DriverOpts": null, "IPPrefixLen": 16, "EndpointID": "7e2eadd789483778564239dd7f41fed94507e93cfe92916bf2fa53729bb431fa", "Aliases": null, "IPAddress": "172.17.0.2", "Gateway": "172.17.0.1", "IPAMConfig": null}}, "GlobalIPv6PrefixLen": 0, "LinkLocalIPv6Address": "", "HairpinMode": false, "IPv6Gateway": "", "SecondaryIPAddresses": null, "SandboxID": "1d735d2799657ab94c94259a80c8d04e0d9dd2bdf12b5ba2a068ea5e35109833", "GlobalIPv6Address": "", "LinkLocalIPv6PrefixLen": 0, "EndpointID": "7e2eadd789483778564239dd7f41fed94507e93cfe92916bf2fa53729bb431fa", "SandboxKey": "/var/run/docker/netns/1d735d279965", "MacAddress": "02:42:ac:11:00:02", "SecondaryIPv6Addresses": null, "IPPrefixLen": 16, "IPAddress": "172.17.0.2", "Gateway": "172.17.0.1", "Ports": {"80/tcp": [{"HostPort": "80", "HostIp": "0.0.0.0"}]}}, "AppArmorProfile": "", "Image": "sha256:92fa43a2ff60503fdf250ef0a16d4170aa2a47c4b5a60d427724283543a8792a", "LogPath": "/var/lib/docker/containers/8f9a1e1cd80c5389f563f9c6e8299c9cab86a24d6562a24e62dc78952092da73/8f9a1e1cd80c5389f563f9c6e8299c9cab86a24d6562a24e62dc78952092da73-json.log", "HostConfig": {"CpuPeriod": 0, "MemorySwappiness": null, "AutoRemove": false, "MemorySwap": 0, "BlkioDeviceReadIOps": null, "CpuQuota": 0, "UsernsMode": "", "CpuPercent": 0, "Dns": null, "Memory": 0, "DeviceRequests": null, "PidsLimit": null, "DnsSearch": null, "Privileged": false, "IOMaximumIOps": 0, "CgroupnsMode": "host", "NanoCpus": 0, "Ulimits": null, "CpusetCpus": "", "PidMode": "", "CgroupParent": "", "BlkioWeight": 0, "ContainerIDFile": "", "RestartPolicy": {"MaximumRetryCount": 0, "Name": ""}, "OomScoreAdj": 0, "BlkioDeviceReadBps": null, "VolumeDriver": "", "ReadonlyRootfs": false, "CpuShares": 0, "PublishAllPorts": false, "MemoryReservation": 0, "BlkioWeightDevice": null, "ConsoleSize": [0, 0], "NetworkMode": "default", "BlkioDeviceWriteBps": null, "Isolation": "", "GroupAdd": null, "ReadonlyPaths": ["/proc/bus", "/proc/fs", "/proc/irq", "/proc/sys", "/proc/sysrq-trigger"], "CpuRealtimeRuntime": 0, "Devices": null, "BlkioDeviceWriteIOps": null, "Binds": [], "CpusetMems": "", "Cgroup": "", "UTSMode": "", "ExtraHosts": null, "Runtime": "runc", "VolumesFrom": null, "CapDrop": null, "DnsOptions": null, "ShmSize": 67108864, "Links": null, "CpuRealtimePeriod": 0, "IpcMode": "private", "MaskedPaths": ["/proc/asound", "/proc/acpi", "/proc/kcore", "/proc/keys", "/proc/latency_stats", "/proc/timer_list", "/proc/timer_stats", "/proc/sched_debug", "/proc/scsi", "/sys/firmware", "/sys/devices/virtual/powercap"], "PortBindings": {"80/tcp": [{"HostPort": "80", "HostIp": "0.0.0.0"}]}, "SecurityOpt": null, "CapAdd": null, "CpuCount": 0, "DeviceCgroupRules": null, "OomKillDisable": false, "LogConfig": {"Config": {}, "Type": "json-file"}, "IOMaximumBandwidth": 0}, "Id": "8f9a1e1cd80c5389f563f9c6e8299c9cab86a24d6562a24e62dc78952092da73", "MountLabel": ""}, "ansible_facts": {"docker_container": {"Platform": "linux", "State": {"Status": "running", "Pid": 11340, "OOMKilled": false, "Dead": false, "Paused": false, "Running": true, "FinishedAt": "0001-01-01T00:00:00Z", "Restarting": false, "Error": "", "StartedAt": "2024-01-12T13:58:09.832813769Z", "ExitCode": 0}, "Config": {"Tty": false, "Cmd": ["httpd-foreground"], "Volumes": null, "Domainname": "", "WorkingDir": "/usr/local/apache2", "Image": "httpd", "Hostname": "8f9a1e1cd80c", "StdinOnce": false, "StopSignal": "SIGWINCH", "Labels": {}, "AttachStdin": false, "User": "", "Env": ["PATH=/usr/local/apache2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin", "HTTPD_PREFIX=/usr/local/apache2", "HTTPD_VERSION=2.4.58", "HTTPD_SHA256=fa16d72a078210a54c47dd5bef2f8b9b8a01d94909a51453956b3ec6442ea4c5", "HTTPD_PATCHES="], "ExposedPorts": {"80/tcp": {}}, "OnBuild": null, "AttachStderr": false, "Entrypoint": null, "AttachStdout": false, "OpenStdin": false}, "ResolvConfPath": "/var/lib/docker/containers/8f9a1e1cd80c5389f563f9c6e8299c9cab86a24d6562a24e62dc78952092da73/resolv.conf", "HostsPath": "/var/lib/docker/containers/8f9a1e1cd80c5389f563f9c6e8299c9cab86a24d6562a24e62dc78952092da73/hosts", "Args": [], "Driver": "overlay2", "Path": "httpd-foreground", "HostnamePath": "/var/lib/docker/containers/8f9a1e1cd80c5389f563f9c6e8299c9cab86a24d6562a24e62dc78952092da73/hostname", "RestartCount": 0, "Name": "/webapp", "Created": "2024-01-12T13:58:09.080589045Z", "ExecIDs": null, "GraphDriver": {"Data": {"MergedDir": "/var/lib/docker/overlay2/de93ede9fef7909bb7abe56610f903e737f82b909d70d9c0931be142662a8e3d/merged", "WorkDir": "/var/lib/docker/overlay2/de93ede9fef7909bb7abe56610f903e737f82b909d70d9c0931be142662a8e3d/work", "LowerDir": "/var/lib/docker/overlay2/de93ede9fef7909bb7abe56610f903e737f82b909d70d9c0931be142662a8e3d-init/diff:/var/lib/docker/overlay2/a947575065468f0800fb652fc5170093938f9a6bc4020168e4988e2cea3b5445/diff:/var/lib/docker/overlay2/e5c68e7ff1516bfd8c0f8db0ae8642ca4a25599833e1d972eb1335a61246c0aa/diff:/var/lib/docker/overlay2/b250498ec8ce7faa991777f661f2e539d3895cf70ce4f2d6f0ab462f459944ee/diff:/var/lib/docker/overlay2/f7bd966c54a0b0bcd97a356a267cba8578dd0baa177216f8bd30ffedd5a8181a/diff:/var/lib/docker/overlay2/6454bf855278dbb8894a23fc0e86b93fcf7b8de2d39ecfd589d485788964a12d/diff:/var/lib/docker/overlay2/5f7c043fbdd75e36e9f6de9b5325bfe614cb11adcf3a36441643e841527bda86/diff", "UpperDir": "/var/lib/docker/overlay2/de93ede9fef7909bb7abe56610f903e737f82b909d70d9c0931be142662a8e3d/diff"}, "Name": "overlay2"}, "Mounts": [], "ProcessLabel": "", "NetworkSettings": {"Bridge": "", "Networks": {"bridge": {"NetworkID": "e1d7c07de42d1ef50c0aff734a575e2ddd13fa36fab10d1e324d0c96f94949de", "MacAddress": "02:42:ac:11:00:02", "GlobalIPv6PrefixLen": 0, "Links": null, "GlobalIPv6Address": "", "IPv6Gateway": "", "DriverOpts": null, "IPPrefixLen": 16, "EndpointID": "7e2eadd789483778564239dd7f41fed94507e93cfe92916bf2fa53729bb431fa", "Aliases": null, "IPAddress": "172.17.0.2", "Gateway": "172.17.0.1", "IPAMConfig": null}}, "GlobalIPv6PrefixLen": 0, "LinkLocalIPv6Address": "", "HairpinMode": false, "IPv6Gateway": "", "SecondaryIPAddresses": null, "SandboxID": "1d735d2799657ab94c94259a80c8d04e0d9dd2bdf12b5ba2a068ea5e35109833", "GlobalIPv6Address": "", "LinkLocalIPv6PrefixLen": 0, "EndpointID": "7e2eadd789483778564239dd7f41fed94507e93cfe92916bf2fa53729bb431fa", "SandboxKey": "/var/run/docker/netns/1d735d279965", "MacAddress": "02:42:ac:11:00:02", "SecondaryIPv6Addresses": null, "IPPrefixLen": 16, "IPAddress": "172.17.0.2", "Gateway": "172.17.0.1", "Ports": {"80/tcp": [{"HostPort": "80", "HostIp": "0.0.0.0"}]}}, "AppArmorProfile": "", "Image": "sha256:92fa43a2ff60503fdf250ef0a16d4170aa2a47c4b5a60d427724283543a8792a", "LogPath": "/var/lib/docker/containers/8f9a1e1cd80c5389f563f9c6e8299c9cab86a24d6562a24e62dc78952092da73/8f9a1e1cd80c5389f563f9c6e8299c9cab86a24d6562a24e62dc78952092da73-json.log", "HostConfig": {"CpuPeriod": 0, "MemorySwappiness": null, "AutoRemove": false, "MemorySwap": 0, "BlkioDeviceReadIOps": null, "CpuQuota": 0, "UsernsMode": "", "CpuPercent": 0, "Dns": null, "Memory": 0, "DeviceRequests": null, "PidsLimit": null, "DnsSearch": null, "Privileged": false, "IOMaximumIOps": 0, "CgroupnsMode": "host", "NanoCpus": 0, "Ulimits": null, "CpusetCpus": "", "PidMode": "", "CgroupParent": "", "BlkioWeight": 0, "ContainerIDFile": "", "RestartPolicy": {"MaximumRetryCount": 0, "Name": ""}, "OomScoreAdj": 0, "BlkioDeviceReadBps": null, "VolumeDriver": "", "ReadonlyRootfs": false, "CpuShares": 0, "PublishAllPorts": false, "MemoryReservation": 0, "BlkioWeightDevice": null, "ConsoleSize": [0, 0], "NetworkMode": "default", "BlkioDeviceWriteBps": null, "Isolation": "", "GroupAdd": null, "ReadonlyPaths": ["/proc/bus", "/proc/fs", "/proc/irq", "/proc/sys", "/proc/sysrq-trigger"], "CpuRealtimeRuntime": 0, "Devices": null, "BlkioDeviceWriteIOps": null, "Binds": [], "CpusetMems": "", "Cgroup": "", "UTSMode": "", "ExtraHosts": null, "Runtime": "runc", "VolumesFrom": null, "CapDrop": null, "DnsOptions": null, "ShmSize": 67108864, "Links": null, "CpuRealtimePeriod": 0, "IpcMode": "private", "MaskedPaths": ["/proc/asound", "/proc/acpi", "/proc/kcore", "/proc/keys", "/proc/latency_stats", "/proc/timer_list", "/proc/timer_stats", "/proc/sched_debug", "/proc/scsi", "/sys/firmware", "/sys/devices/virtual/powercap"], "PortBindings": {"80/tcp": [{"HostPort": "80", "HostIp": "0.0.0.0"}]}, "SecurityOpt": null, "CapAdd": null, "CpuCount": 0, "DeviceCgroupRules": null, "OomKillDisable": false, "LogConfig": {"Config": {}, "Type": "json-file"}, "IOMaximumBandwidth": 0}, "Id": "8f9a1e1cd80c5389f563f9c6e8299c9cab86a24d6562a24e62dc78952092da73", "MountLabel": ""}}}\r\n', 'Shared connection to 192.168.50.14 closed.\r\n')
+2024-01-10 14:12:55,891 p=6512 u=vagrant n=ansible | <192.168.50.14> ESTABLISH SSH CONNECTION FOR USER: vagrant
+2024-01-10 14:12:55,893 p=6512 u=vagrant n=ansible | <192.168.50.14> SSH: EXEC sshpass -d10 ssh -C -o ControlMaster=auto -o ControlPersist=60s -o 'User="vagrant"' -o ConnectTimeout=10 -o ControlPath=/home/vagrant/.ansible/cp/3c4d9e094d 192.168.50.14 '/bin/sh -c '"'"'rm -f -r /home/vagrant/.ansible/tmp/ansible-tmp-1704895974.51-6512-268545670670610/ > /dev/null 2>&1 && sleep 0'"'"''
+2024-01-10 14:12:55,957 p=6512 u=vagrant n=ansible | <192.168.50.14> (0, '', '')
+2024-01-10 14:12:56,048 p=6415 u=vagrant n=ansible | ok: [web] => {
+    "ansible_facts": {
+        "docker_container": {
+            "AppArmorProfile": "", 
+            "Args": [], 
+            "Config": {
+                "AttachStderr": false, 
+                "AttachStdin": false, 
+                "AttachStdout": false, 
+                "Cmd": [
+                    "httpd-foreground"
+                ], 
+                "Domainname": "", 
+                "Entrypoint": null, 
+                "Env": [
+                    "PATH=/usr/local/apache2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin", 
+                    "HTTPD_PREFIX=/usr/local/apache2", 
+                    "HTTPD_VERSION=2.4.58", 
+                    "HTTPD_SHA256=fa16d72a078210a54c47dd5bef2f8b9b8a01d94909a51453956b3ec6442ea4c5", 
+                    "HTTPD_PATCHES="
+                ], 
+                "ExposedPorts": {
+                    "80/tcp": {}
+                }, 
+                "Hostname": "8f9a1e1cd80c", 
+                "Image": "httpd", 
+                "Labels": {}, 
+                "OnBuild": null, 
+                "OpenStdin": false, 
+                "StdinOnce": false, 
+                "StopSignal": "SIGWINCH", 
+                "Tty": false, 
+                "User": "", 
+                "Volumes": null, 
+                "WorkingDir": "/usr/local/apache2"
+            }, 
+            "Created": "2024-01-12T13:58:09.080589045Z", 
+            "Driver": "overlay2", 
+            "ExecIDs": null, 
+            "GraphDriver": {
+                "Data": {
+                    "LowerDir": "/var/lib/docker/overlay2/de93ede9fef7909bb7abe56610f903e737f82b909d70d9c0931be142662a8e3d-init/diff:/var/lib/docker/overlay2/a947575065468f0800fb652fc5170093938f9a6bc4020168e4988e2cea3b5445/diff:/var/lib/docker/overlay2/e5c68e7ff1516bfd8c0f8db0ae8642ca4a25599833e1d972eb1335a61246c0aa/diff:/var/lib/docker/overlay2/b250498ec8ce7faa991777f661f2e539d3895cf70ce4f2d6f0ab462f459944ee/diff:/var/lib/docker/overlay2/f7bd966c54a0b0bcd97a356a267cba8578dd0baa177216f8bd30ffedd5a8181a/diff:/var/lib/docker/overlay2/6454bf855278dbb8894a23fc0e86b93fcf7b8de2d39ecfd589d485788964a12d/diff:/var/lib/docker/overlay2/5f7c043fbdd75e36e9f6de9b5325bfe614cb11adcf3a36441643e841527bda86/diff", 
+                    "MergedDir": "/var/lib/docker/overlay2/de93ede9fef7909bb7abe56610f903e737f82b909d70d9c0931be142662a8e3d/merged", 
+                    "UpperDir": "/var/lib/docker/overlay2/de93ede9fef7909bb7abe56610f903e737f82b909d70d9c0931be142662a8e3d/diff", 
+                    "WorkDir": "/var/lib/docker/overlay2/de93ede9fef7909bb7abe56610f903e737f82b909d70d9c0931be142662a8e3d/work"
+                }, 
+                "Name": "overlay2"
+            }, 
+            "HostConfig": {
+                "AutoRemove": false, 
+                "Binds": [], 
+                "BlkioDeviceReadBps": null, 
+                "BlkioDeviceReadIOps": null, 
+                "BlkioDeviceWriteBps": null, 
+                "BlkioDeviceWriteIOps": null, 
+                "BlkioWeight": 0, 
+                "BlkioWeightDevice": null, 
+                "CapAdd": null, 
+                "CapDrop": null, 
+                "Cgroup": "", 
+                "CgroupParent": "", 
+                "CgroupnsMode": "host", 
+                "ConsoleSize": [
+                    0, 
+                    0
+                ], 
+                "ContainerIDFile": "", 
+                "CpuCount": 0, 
+                "CpuPercent": 0, 
+                "CpuPeriod": 0, 
+                "CpuQuota": 0, 
+                "CpuRealtimePeriod": 0, 
+                "CpuRealtimeRuntime": 0, 
+                "CpuShares": 0, 
+                "CpusetCpus": "", 
+                "CpusetMems": "", 
+                "DeviceCgroupRules": null, 
+                "DeviceRequests": null, 
+                "Devices": null, 
+                "Dns": null, 
+                "DnsOptions": null, 
+                "DnsSearch": null, 
+                "ExtraHosts": null, 
+                "GroupAdd": null, 
+                "IOMaximumBandwidth": 0, 
+                "IOMaximumIOps": 0, 
+                "IpcMode": "private", 
+                "Isolation": "", 
+                "Links": null, 
+                "LogConfig": {
+                    "Config": {}, 
+                    "Type": "json-file"
+                }, 
+                "MaskedPaths": [
+                    "/proc/asound", 
+                    "/proc/acpi", 
+                    "/proc/kcore", 
+                    "/proc/keys", 
+                    "/proc/latency_stats", 
+                    "/proc/timer_list", 
+                    "/proc/timer_stats", 
+                    "/proc/sched_debug", 
+                    "/proc/scsi", 
+                    "/sys/firmware", 
+                    "/sys/devices/virtual/powercap"
+                ], 
+                "Memory": 0, 
+                "MemoryReservation": 0, 
+                "MemorySwap": 0, 
+                "MemorySwappiness": null, 
+                "NanoCpus": 0, 
+                "NetworkMode": "default", 
+                "OomKillDisable": false, 
+                "OomScoreAdj": 0, 
+                "PidMode": "", 
+                "PidsLimit": null, 
+                "PortBindings": {
+                    "80/tcp": [
+                        {
+                            "HostIp": "0.0.0.0", 
+                            "HostPort": "80"
+                        }
+                    ]
+                }, 
+                "Privileged": false, 
+                "PublishAllPorts": false, 
+                "ReadonlyPaths": [
+                    "/proc/bus", 
+                    "/proc/fs", 
+                    "/proc/irq", 
+                    "/proc/sys", 
+                    "/proc/sysrq-trigger"
+                ], 
+                "ReadonlyRootfs": false, 
+                "RestartPolicy": {
+                    "MaximumRetryCount": 0, 
+                    "Name": ""
+                }, 
+                "Runtime": "runc", 
+                "SecurityOpt": null, 
+                "ShmSize": 67108864, 
+                "UTSMode": "", 
+                "Ulimits": null, 
+                "UsernsMode": "", 
+                "VolumeDriver": "", 
+                "VolumesFrom": null
+            }, 
+            "HostnamePath": "/var/lib/docker/containers/8f9a1e1cd80c5389f563f9c6e8299c9cab86a24d6562a24e62dc78952092da73/hostname", 
+            "HostsPath": "/var/lib/docker/containers/8f9a1e1cd80c5389f563f9c6e8299c9cab86a24d6562a24e62dc78952092da73/hosts", 
+            "Id": "8f9a1e1cd80c5389f563f9c6e8299c9cab86a24d6562a24e62dc78952092da73", 
+            "Image": "sha256:92fa43a2ff60503fdf250ef0a16d4170aa2a47c4b5a60d427724283543a8792a", 
+            "LogPath": "/var/lib/docker/containers/8f9a1e1cd80c5389f563f9c6e8299c9cab86a24d6562a24e62dc78952092da73/8f9a1e1cd80c5389f563f9c6e8299c9cab86a24d6562a24e62dc78952092da73-json.log", 
+            "MountLabel": "", 
+            "Mounts": [], 
+            "Name": "/webapp", 
+            "NetworkSettings": {
+                "Bridge": "", 
+                "EndpointID": "7e2eadd789483778564239dd7f41fed94507e93cfe92916bf2fa53729bb431fa", 
+                "Gateway": "172.17.0.1", 
+                "GlobalIPv6Address": "", 
+                "GlobalIPv6PrefixLen": 0, 
+                "HairpinMode": false, 
+                "IPAddress": "172.17.0.2", 
+                "IPPrefixLen": 16, 
+                "IPv6Gateway": "", 
+                "LinkLocalIPv6Address": "", 
+                "LinkLocalIPv6PrefixLen": 0, 
+                "MacAddress": "02:42:ac:11:00:02", 
+                "Networks": {
+                    "bridge": {
+                        "Aliases": null, 
+                        "DriverOpts": null, 
+                        "EndpointID": "7e2eadd789483778564239dd7f41fed94507e93cfe92916bf2fa53729bb431fa", 
+                        "Gateway": "172.17.0.1", 
+                        "GlobalIPv6Address": "", 
+                        "GlobalIPv6PrefixLen": 0, 
+                        "IPAMConfig": null, 
+                        "IPAddress": "172.17.0.2", 
+                        "IPPrefixLen": 16, 
+                        "IPv6Gateway": "", 
+                        "Links": null, 
+                        "MacAddress": "02:42:ac:11:00:02", 
+                        "NetworkID": "e1d7c07de42d1ef50c0aff734a575e2ddd13fa36fab10d1e324d0c96f94949de"
+                    }
+                }, 
+                "Ports": {
+                    "80/tcp": [
+                        {
+                            "HostIp": "0.0.0.0", 
+                            "HostPort": "80"
+                        }
+                    ]
+                }, 
+                "SandboxID": "1d735d2799657ab94c94259a80c8d04e0d9dd2bdf12b5ba2a068ea5e35109833", 
+                "SandboxKey": "/var/run/docker/netns/1d735d279965", 
+                "SecondaryIPAddresses": null, 
+                "SecondaryIPv6Addresses": null
+            }, 
+            "Path": "httpd-foreground", 
+            "Platform": "linux", 
+            "ProcessLabel": "", 
+            "ResolvConfPath": "/var/lib/docker/containers/8f9a1e1cd80c5389f563f9c6e8299c9cab86a24d6562a24e62dc78952092da73/resolv.conf", 
+            "RestartCount": 0, 
+            "State": {
+                "Dead": false, 
+                "Error": "", 
+                "ExitCode": 0, 
+                "FinishedAt": "0001-01-01T00:00:00Z", 
+                "OOMKilled": false, 
+                "Paused": false, 
+                "Pid": 11340, 
+                "Restarting": false, 
+                "Running": true, 
+                "StartedAt": "2024-01-12T13:58:09.832813769Z", 
+                "Status": "running"
+            }
+        }
+    }, 
+    "changed": false, 
+    "container": {
+        "AppArmorProfile": "", 
+        "Args": [], 
+        "Config": {
+            "AttachStderr": false, 
+            "AttachStdin": false, 
+            "AttachStdout": false, 
+            "Cmd": [
+                "httpd-foreground"
+            ], 
+            "Domainname": "", 
+            "Entrypoint": null, 
+            "Env": [
+                "PATH=/usr/local/apache2/bin:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin", 
+                "HTTPD_PREFIX=/usr/local/apache2", 
+                "HTTPD_VERSION=2.4.58", 
+                "HTTPD_SHA256=fa16d72a078210a54c47dd5bef2f8b9b8a01d94909a51453956b3ec6442ea4c5", 
+                "HTTPD_PATCHES="
+            ], 
+            "ExposedPorts": {
+                "80/tcp": {}
+            }, 
+            "Hostname": "8f9a1e1cd80c", 
+            "Image": "httpd", 
+            "Labels": {}, 
+            "OnBuild": null, 
+            "OpenStdin": false, 
+            "StdinOnce": false, 
+            "StopSignal": "SIGWINCH", 
+            "Tty": false, 
+            "User": "", 
+            "Volumes": null, 
+            "WorkingDir": "/usr/local/apache2"
+        }, 
+        "Created": "2024-01-12T13:58:09.080589045Z", 
+        "Driver": "overlay2", 
+        "ExecIDs": null, 
+        "GraphDriver": {
+            "Data": {
+                "LowerDir": "/var/lib/docker/overlay2/de93ede9fef7909bb7abe56610f903e737f82b909d70d9c0931be142662a8e3d-init/diff:/var/lib/docker/overlay2/a947575065468f0800fb652fc5170093938f9a6bc4020168e4988e2cea3b5445/diff:/var/lib/docker/overlay2/e5c68e7ff1516bfd8c0f8db0ae8642ca4a25599833e1d972eb1335a61246c0aa/diff:/var/lib/docker/overlay2/b250498ec8ce7faa991777f661f2e539d3895cf70ce4f2d6f0ab462f459944ee/diff:/var/lib/docker/overlay2/f7bd966c54a0b0bcd97a356a267cba8578dd0baa177216f8bd30ffedd5a8181a/diff:/var/lib/docker/overlay2/6454bf855278dbb8894a23fc0e86b93fcf7b8de2d39ecfd589d485788964a12d/diff:/var/lib/docker/overlay2/5f7c043fbdd75e36e9f6de9b5325bfe614cb11adcf3a36441643e841527bda86/diff", 
+                "MergedDir": "/var/lib/docker/overlay2/de93ede9fef7909bb7abe56610f903e737f82b909d70d9c0931be142662a8e3d/merged", 
+                "UpperDir": "/var/lib/docker/overlay2/de93ede9fef7909bb7abe56610f903e737f82b909d70d9c0931be142662a8e3d/diff", 
+                "WorkDir": "/var/lib/docker/overlay2/de93ede9fef7909bb7abe56610f903e737f82b909d70d9c0931be142662a8e3d/work"
+            }, 
+            "Name": "overlay2"
+        }, 
+        "HostConfig": {
+            "AutoRemove": false, 
+            "Binds": [], 
+            "BlkioDeviceReadBps": null, 
+            "BlkioDeviceReadIOps": null, 
+            "BlkioDeviceWriteBps": null, 
+            "BlkioDeviceWriteIOps": null, 
+            "BlkioWeight": 0, 
+            "BlkioWeightDevice": null, 
+            "CapAdd": null, 
+            "CapDrop": null, 
+            "Cgroup": "", 
+            "CgroupParent": "", 
+            "CgroupnsMode": "host", 
+            "ConsoleSize": [
+                0, 
+                0
+            ], 
+            "ContainerIDFile": "", 
+            "CpuCount": 0, 
+            "CpuPercent": 0, 
+            "CpuPeriod": 0, 
+            "CpuQuota": 0, 
+            "CpuRealtimePeriod": 0, 
+            "CpuRealtimeRuntime": 0, 
+            "CpuShares": 0, 
+            "CpusetCpus": "", 
+            "CpusetMems": "", 
+            "DeviceCgroupRules": null, 
+            "DeviceRequests": null, 
+            "Devices": null, 
+            "Dns": null, 
+            "DnsOptions": null, 
+            "DnsSearch": null, 
+            "ExtraHosts": null, 
+            "GroupAdd": null, 
+            "IOMaximumBandwidth": 0, 
+            "IOMaximumIOps": 0, 
+            "IpcMode": "private", 
+            "Isolation": "", 
+            "Links": null, 
+            "LogConfig": {
+                "Config": {}, 
+                "Type": "json-file"
+            }, 
+            "MaskedPaths": [
+                "/proc/asound", 
+                "/proc/acpi", 
+                "/proc/kcore", 
+                "/proc/keys", 
+                "/proc/latency_stats", 
+                "/proc/timer_list", 
+                "/proc/timer_stats", 
+                "/proc/sched_debug", 
+                "/proc/scsi", 
+                "/sys/firmware", 
+                "/sys/devices/virtual/powercap"
+            ], 
+            "Memory": 0, 
+            "MemoryReservation": 0, 
+            "MemorySwap": 0, 
+            "MemorySwappiness": null, 
+            "NanoCpus": 0, 
+            "NetworkMode": "default", 
+            "OomKillDisable": false, 
+            "OomScoreAdj": 0, 
+            "PidMode": "", 
+            "PidsLimit": null, 
+            "PortBindings": {
+                "80/tcp": [
+                    {
+                        "HostIp": "0.0.0.0", 
+                        "HostPort": "80"
+                    }
+                ]
+            }, 
+            "Privileged": false, 
+            "PublishAllPorts": false, 
+            "ReadonlyPaths": [
+                "/proc/bus", 
+                "/proc/fs", 
+                "/proc/irq", 
+                "/proc/sys", 
+                "/proc/sysrq-trigger"
+            ], 
+            "ReadonlyRootfs": false, 
+            "RestartPolicy": {
+                "MaximumRetryCount": 0, 
+                "Name": ""
+            }, 
+            "Runtime": "runc", 
+            "SecurityOpt": null, 
+            "ShmSize": 67108864, 
+            "UTSMode": "", 
+            "Ulimits": null, 
+            "UsernsMode": "", 
+            "VolumeDriver": "", 
+            "VolumesFrom": null
+        }, 
+        "HostnamePath": "/var/lib/docker/containers/8f9a1e1cd80c5389f563f9c6e8299c9cab86a24d6562a24e62dc78952092da73/hostname", 
+        "HostsPath": "/var/lib/docker/containers/8f9a1e1cd80c5389f563f9c6e8299c9cab86a24d6562a24e62dc78952092da73/hosts", 
+        "Id": "8f9a1e1cd80c5389f563f9c6e8299c9cab86a24d6562a24e62dc78952092da73", 
+        "Image": "sha256:92fa43a2ff60503fdf250ef0a16d4170aa2a47c4b5a60d427724283543a8792a", 
+        "LogPath": "/var/lib/docker/containers/8f9a1e1cd80c5389f563f9c6e8299c9cab86a24d6562a24e62dc78952092da73/8f9a1e1cd80c5389f563f9c6e8299c9cab86a24d6562a24e62dc78952092da73-json.log", 
+        "MountLabel": "", 
+        "Mounts": [], 
+        "Name": "/webapp", 
+        "NetworkSettings": {
+            "Bridge": "", 
+            "EndpointID": "7e2eadd789483778564239dd7f41fed94507e93cfe92916bf2fa53729bb431fa", 
+            "Gateway": "172.17.0.1", 
+            "GlobalIPv6Address": "", 
+            "GlobalIPv6PrefixLen": 0, 
+            "HairpinMode": false, 
+            "IPAddress": "172.17.0.2", 
+            "IPPrefixLen": 16, 
+            "IPv6Gateway": "", 
+            "LinkLocalIPv6Address": "", 
+            "LinkLocalIPv6PrefixLen": 0, 
+            "MacAddress": "02:42:ac:11:00:02", 
+            "Networks": {
+                "bridge": {
+                    "Aliases": null, 
+                    "DriverOpts": null, 
+                    "EndpointID": "7e2eadd789483778564239dd7f41fed94507e93cfe92916bf2fa53729bb431fa", 
+                    "Gateway": "172.17.0.1", 
+                    "GlobalIPv6Address": "", 
+                    "GlobalIPv6PrefixLen": 0, 
+                    "IPAMConfig": null, 
+                    "IPAddress": "172.17.0.2", 
+                    "IPPrefixLen": 16, 
+                    "IPv6Gateway": "", 
+                    "Links": null, 
+                    "MacAddress": "02:42:ac:11:00:02", 
+                    "NetworkID": "e1d7c07de42d1ef50c0aff734a575e2ddd13fa36fab10d1e324d0c96f94949de"
+                }
+            }, 
+            "Ports": {
+                "80/tcp": [
+                    {
+                        "HostIp": "0.0.0.0", 
+                        "HostPort": "80"
+                    }
+                ]
+            }, 
+            "SandboxID": "1d735d2799657ab94c94259a80c8d04e0d9dd2bdf12b5ba2a068ea5e35109833", 
+            "SandboxKey": "/var/run/docker/netns/1d735d279965", 
+            "SecondaryIPAddresses": null, 
+            "SecondaryIPv6Addresses": null
+        }, 
+        "Path": "httpd-foreground", 
+        "Platform": "linux", 
+        "ProcessLabel": "", 
+        "ResolvConfPath": "/var/lib/docker/containers/8f9a1e1cd80c5389f563f9c6e8299c9cab86a24d6562a24e62dc78952092da73/resolv.conf", 
+        "RestartCount": 0, 
+        "State": {
+            "Dead": false, 
+            "Error": "", 
+            "ExitCode": 0, 
+            "FinishedAt": "0001-01-01T00:00:00Z", 
+            "OOMKilled": false, 
+            "Paused": false, 
+            "Pid": 11340, 
+            "Restarting": false, 
+            "Running": true, 
+            "StartedAt": "2024-01-12T13:58:09.832813769Z", 
+            "Status": "running"
+        }
+    }, 
+    "invocation": {
+        "module_args": {
+            "api_version": "auto", 
+            "auto_remove": false, 
+            "blkio_weight": null, 
+            "ca_cert": null, 
+            "cap_drop": null, 
+            "capabilities": null, 
+            "cleanup": false, 
+            "client_cert": null, 
+            "client_key": null, 
+            "command": null, 
+            "comparisons": null, 
+            "cpu_period": null, 
+            "cpu_quota": null, 
+            "cpu_shares": null, 
+            "cpuset_cpus": null, 
+            "cpuset_mems": null, 
+            "debug": false, 
+            "detach": true, 
+            "device_read_bps": null, 
+            "device_read_iops": null, 
+            "device_write_bps": null, 
+            "device_write_iops": null, 
+            "devices": null, 
+            "dns_opts": null, 
+            "dns_search_domains": null, 
+            "dns_servers": null, 
+            "docker_host": "unix://var/run/docker.sock", 
+            "domainname": null, 
+            "entrypoint": null, 
+            "env": null, 
+            "env_file": null, 
+            "etc_hosts": null, 
+            "exposed_ports": null, 
+            "force_kill": false, 
+            "groups": null, 
+            "healthcheck": null, 
+            "hostname": null, 
+            "ignore_image": false, 
+            "image": "httpd", 
+            "init": false, 
+            "interactive": false, 
+            "ipc_mode": null, 
+            "keep_volumes": true, 
+            "kernel_memory": null, 
+            "kill_signal": null, 
+            "labels": null, 
+            "links": null, 
+            "log_driver": null, 
+            "log_options": null, 
+            "mac_address": null, 
+            "memory": "0", 
+            "memory_reservation": null, 
+            "memory_swap": null, 
+            "memory_swappiness": null, 
+            "mounts": null, 
+            "name": "webapp", 
+            "network_mode": null, 
+            "networks": null, 
+            "networks_cli_compatible": null, 
+            "oom_killer": null, 
+            "oom_score_adj": null, 
+            "output_logs": false, 
+            "paused": false, 
+            "pid_mode": null, 
+            "pids_limit": null, 
+            "ports": [
+                "80:80"
+            ], 
+            "privileged": false, 
+            "published_ports": [
+                "80:80"
+            ], 
+            "pull": false, 
+            "purge_networks": false, 
+            "read_only": false, 
+            "recreate": false, 
+            "restart": false, 
+            "restart_policy": null, 
+            "restart_retries": null, 
+            "runtime": null, 
+            "security_opts": null, 
+            "shm_size": null, 
+            "ssl_version": null, 
+            "state": "started", 
+            "stop_signal": null, 
+            "stop_timeout": null, 
+            "sysctls": null, 
+            "timeout": 60, 
+            "tls": false, 
+            "tls_hostname": "localhost", 
+            "tmpfs": null, 
+            "trust_image_content": false, 
+            "tty": false, 
+            "ulimits": null, 
+            "user": null, 
+            "userns_mode": null, 
+            "uts": null, 
+            "validate_certs": false, 
+            "volume_driver": null, 
+            "volumes": null, 
+            "volumes_from": null, 
+            "working_dir": null
+        }
+    }
+}
+2024-01-10 14:12:56,050 p=6415 u=vagrant n=ansible | META: ran handlers
+2024-01-10 14:12:56,051 p=6415 u=vagrant n=ansible | META: ran handlers
+2024-01-10 14:12:56,056 p=6415 u=vagrant n=ansible | PLAY RECAP **********************************************************************************************************************************
+2024-01-10 14:12:56,057 p=6415 u=vagrant n=ansible | web                        : ok=6    changed=1    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
+2024-01-10 14:49:59,944 p=6567 u=vagrant n=ansible | playbook: deploy.yaml
+2024-01-10 14:50:06,335 p=6575 u=vagrant n=ansible | PLAY [Apache installation using docker] *****************************************************************************************************
+2024-01-10 14:50:06,363 p=6575 u=vagrant n=ansible | TASK [Gathering Facts] **********************************************************************************************************************
+2024-01-10 14:50:08,589 p=6575 u=vagrant n=ansible | ok: [web]
+2024-01-10 14:50:08,631 p=6575 u=vagrant n=ansible | TASK [Install some package] *****************************************************************************************************************
+2024-01-10 14:50:10,221 p=6575 u=vagrant n=ansible | ok: [web] => (item=epel-release)
+2024-01-10 14:50:11,340 p=6575 u=vagrant n=ansible | ok: [web] => (item=wget)
+2024-01-10 14:50:12,413 p=6575 u=vagrant n=ansible | ok: [web] => (item=git)
+2024-01-10 14:50:12,458 p=6575 u=vagrant n=ansible | TASK [Download pip script] ******************************************************************************************************************
+2024-01-10 14:50:14,421 p=6575 u=vagrant n=ansible | ok: [web]
+2024-01-10 14:50:14,457 p=6575 u=vagrant n=ansible | TASK [Install python-pip] *******************************************************************************************************************
+2024-01-10 14:50:23,453 p=6575 u=vagrant n=ansible | changed: [web]
+2024-01-10 14:50:23,510 p=6575 u=vagrant n=ansible | TASK [Install docker python] ****************************************************************************************************************
+2024-01-10 14:50:25,643 p=6575 u=vagrant n=ansible | ok: [web]
+2024-01-10 14:50:25,747 p=6575 u=vagrant n=ansible | TASK [Copy web site file template] **********************************************************************************************************
+2024-01-10 14:50:27,388 p=6575 u=vagrant n=ansible | changed: [web]
+2024-01-10 14:50:27,424 p=6575 u=vagrant n=ansible | TASK [Create Apache Conteneur] **************************************************************************************************************
+2024-01-10 14:50:30,790 p=6575 u=vagrant n=ansible | changed: [web]
+2024-01-10 14:50:30,794 p=6575 u=vagrant n=ansible | PLAY RECAP **********************************************************************************************************************************
+2024-01-10 14:50:30,795 p=6575 u=vagrant n=ansible | web                        : ok=7    changed=3    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0   
